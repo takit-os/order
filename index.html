@@ -1,0 +1,1460 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Takit'os chez vous</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: phone-first single scroll. A turquoise "wall" header carries the paper-fan garland from the dining room;
+   below it, sticky category chips, menu rows with drawn tiles, a bottom basket bar, and sheets for items, the taco kit and checkout.
+   From 960px the basket becomes a sticky column. Colours come from the room: turquoise wall, rosa mexicano, pale pine, tissue-paper accents. */
+:root{
+  --paper:#FFFDF9; --paper-2:#F7F0E5; --pino:#E6D2B5; --line:#EDE2D2;
+  --ink:#16292B; --ink-soft:#4E6265;
+  --wall:#0E8791; --wall-deep:#0A6870; --wall-ink:#F3FBFB; --wall-soft:#CBEBED;
+  --rosa:#CF2468; --rosa-ink:#FFFFFF; --rosa-soft:#FBDFEA;
+  --sol:#F2B33D; --sol-soft:#FDEFC9; --verde:#4E9A45; --verde-soft:#D7EDCF; --naranja:#E8742D; --naranja-soft:#FBDDC6; --morado:#7B3F8C; --morado-soft:#E9DAF0; --rojo:#D8432F;
+  --ok:#2E7D4F; --crit:#B3261E; --scrim:rgba(10,30,32,.52); --teal-ink:#0B6A73;
+  --tile-sol:#FBE3A6; --tile-wall:#BFE6E8; --tile-rosa:#F8CFDE; --tile-verde:#D2EBC6; --tile-naranja:#F9D2B4; --tile-morado:#E3D1EC; --tile-dot:rgba(255,255,255,.5);
+  --art-ink:#1E2A2B; --art-shadow:rgba(22,41,43,.16);
+  --f-bun:#EFC77E; --f-crust:#C9853A; --f-leaf:#5FA343; --f-tomato:#D9452C; --f-cheese:#F9C93B; --f-crumb:#D9902E; --f-pork:#8C3A22; --f-pork-hi:#C2633F;
+  --f-beef:#5C301C; --f-veg:#6E8B3D; --f-fish:#FBEFE0; --f-fishfry:#E5A748; --f-shrimp:#F28B6C; --f-sauce:#F4A88F; --f-lime:#9CCB3B; --f-mango:#F4B53C;
+  --f-onion:#A0457A; --f-plantain:#EBB64B; --f-plantain-dk:#B87A22; --f-fry:#E8782A; --f-kraft:#D2A86E; --f-kraft-dk:#B98B50; --f-glass:#EEF7F6; --f-juice:#F39A2B;
+  --f-can:#2F8F78; --f-canband:#F5C24F; --f-beer:#F4C04A; --f-label:#F5EBD0; --f-plate:#FFFDF8; --f-bowl:#2E8C73; --f-ceviche:#F4EFD9; --f-box:#F08A6B;
+  --f-tortilla:#F3DFA8; --f-tortilla-dk:#D9B86A; --f-cream:#FFF6E6; --f-biscuit:#C99A62; --f-fruit:#F2A541; --f-quinoa:#D8B48A; --f-cinnamon:#9B5A2E;
+  --f-chia:#F4F1EA; --f-passion:#F2B92E; --f-passion-shell:#6E2D5A; --f-purple:#5B2150; --f-purple-corn:#3A1838; --f-white:#FFFFFF;
+  --f-mandarina:#F28A2E; --f-guayaba:#F4B6C8; --f-toronja:#6FA84A; --f-cap:#C9CED1; --f-yellow-can:#F5D320; --f-blue:#1E4FA3; --f-amber:#B8621F; --f-gold:#D9B44A; --f-red:#C62E2E; --f-dark-beer:#4A2512;
+  --shadow-pop:0 18px 50px -24px rgba(10,40,44,.55);
+  --font-display:'Alfa Slab One','Rockwell Extra Bold','Rockwell','Roboto Slab','Bookman Old Style',Georgia,serif;
+  --font-text:'Figtree',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0F1C1E; --paper-2:#17292C; --pino:#3B3328; --line:#243739;
+    --ink:#EAF3F2; --ink-soft:#A6BABB;
+    --wall:#0B5F67; --wall-deep:#084A50; --wall-ink:#ECF8F8; --wall-soft:#123E42;
+    --rosa:#F2639B; --rosa-ink:#1B0A11; --rosa-soft:#47192C;
+    --sol:#F4C35A; --sol-soft:#3B3117; --verde:#78C26B; --verde-soft:#1D3A1D; --naranja:#F29558; --naranja-soft:#43281A; --morado:#B987C9; --morado-soft:#33213B; --rojo:#F07A64;
+    --ok:#6CC28F; --crit:#F28B82; --scrim:rgba(0,0,0,.62); --teal-ink:#86D3D9;
+    --tile-sol:#5A4A22; --tile-wall:#1D4B4F; --tile-rosa:#552538; --tile-verde:#28452A; --tile-naranja:#55361F; --tile-morado:#3F2B4A; --tile-dot:rgba(255,255,255,.12);
+    --art-shadow:rgba(0,0,0,.35);
+    --shadow-pop:0 18px 50px -20px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0F1C1E; --paper-2:#17292C; --pino:#3B3328; --line:#243739;
+  --ink:#EAF3F2; --ink-soft:#A6BABB;
+  --wall:#0B5F67; --wall-deep:#084A50; --wall-ink:#ECF8F8; --wall-soft:#123E42;
+  --rosa:#F2639B; --rosa-ink:#1B0A11; --rosa-soft:#47192C;
+  --sol:#F4C35A; --sol-soft:#3B3117; --verde:#78C26B; --verde-soft:#1D3A1D; --naranja:#F29558; --naranja-soft:#43281A; --morado:#B987C9; --morado-soft:#33213B; --rojo:#F07A64;
+  --ok:#6CC28F; --crit:#F28B82; --scrim:rgba(0,0,0,.62); --teal-ink:#86D3D9;
+  --tile-sol:#5A4A22; --tile-wall:#1D4B4F; --tile-rosa:#552538; --tile-verde:#28452A; --tile-naranja:#55361F; --tile-morado:#3F2B4A; --tile-dot:rgba(255,255,255,.12);
+  --art-shadow:rgba(0,0,0,.35);
+  --shadow-pop:0 18px 50px -20px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html.locked{overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-text);font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:45;background:var(--wall)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+button:disabled{cursor:not-allowed}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
+h1,h2,h3{text-wrap:balance}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:-1px;padding:0;border:0}
+.nw{white-space:nowrap}
+.small{font-size:13.5px;color:var(--ink-soft);margin:0}
+.link{background:none;border:0;padding:0;color:var(--teal-ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;font-size:14px;text-align:left}
+.sel{user-select:all;font-weight:700;white-space:nowrap}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Demo ribbon */
+.ribbon{background:var(--sol-soft);color:var(--ink);font-size:13px;font-weight:600}
+.ribbon .wrap{padding-block:6px;display:flex;gap:8px;align-items:center}
+.ribbon b{background:var(--ink);color:var(--paper);border-radius:999px;padding:1px 8px;font-size:12px}
+
+/* Hero: the wall */
+.hero{background:var(--wall);color:var(--wall-ink);position:relative;overflow:hidden}
+.garland{display:block;width:100%;height:66px}
+.garland.play .fan{transform-box:fill-box;transform-origin:50% 0;animation:sway 2.6s ease-out both}
+@keyframes sway{0%{transform:rotate(7deg)}35%{transform:rotate(-5deg)}65%{transform:rotate(3deg)}100%{transform:rotate(0)}}
+.hero-in{display:grid;gap:12px;padding-block:0 22px;min-width:0}
+.hero-in > *{min-width:0}
+.hero-grid{display:grid;gap:22px}
+.hero-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px}
+.wordmark{font-family:var(--font-display);font-weight:400;font-size:clamp(44px,12.4vw,104px);line-height:.95;margin:0;letter-spacing:.01em;color:var(--wall-ink);text-shadow:.045em .05em 0 var(--rosa);white-space:nowrap;min-width:0}
+.wordmark .ap{color:var(--sol)}
+.lang-btn{border:1.5px solid var(--wall-ink);background:transparent;color:var(--wall-ink);border-radius:999px;padding:4px 11px;font-weight:800;font-size:13px;margin-top:4px}
+.tagline{margin:0;font-size:clamp(16.5px,4.3vw,20px);font-weight:600;max-width:40ch;line-height:1.35}
+.status{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:0;font-size:15px}
+.status .dot{width:9px;height:9px;border-radius:50%;background:#7EE2A0;box-shadow:0 0 0 4px rgba(126,226,160,.25);flex:none}
+.status b{font-weight:800}
+.status span{opacity:.85}
+.status-sub{margin:-6px 0 0;font-size:15px;opacity:.88}
+.mode{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--wall-deep);padding:4px;border-radius:14px;max-width:440px}
+.mode button{border:0;background:transparent;color:var(--wall-ink);border-radius:11px;padding:10px 8px;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px}
+.mode button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.again{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;background:var(--wall-deep);border-radius:14px;padding:10px 12px;max-width:440px}
+.again p{margin:0;font-size:14px}
+.again button{border:0;border-radius:10px;background:var(--sol);color:#1E2A2B;font-weight:800;padding:8px 12px;font-size:14px}
+.sig{display:none}
+@media (min-width:960px){
+  .hero-grid{grid-template-columns:minmax(0,1fr) 360px;align-items:end}
+  .sig{display:grid;gap:8px;justify-items:start;align-content:start;background:var(--paper);color:var(--ink);border-radius:26px 26px 0 0;padding:20px 22px 24px;margin-top:8px}
+  .sig .art{width:190px;height:190px;justify-self:center;margin-top:-6px}
+  .sig h2{font-family:var(--font-display);font-weight:400;font-size:30px;line-height:1.05;margin:0}
+  .sig p{margin:0;font-size:15px;color:var(--ink-soft)}
+  .sig button{margin-top:4px;border:0;border-radius:12px;background:var(--rosa);color:var(--rosa-ink);font-weight:800;padding:10px 16px}
+}
+
+/* Chips */
+.cats{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.cats-in{display:flex;gap:8px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+.cats-in::-webkit-scrollbar{display:none}
+.chip{position:relative;flex:none;border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 13px;font-weight:700;font-size:14px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-current="true"]{background:var(--wall);border-color:var(--wall);color:var(--wall-ink)}
+.chip .new-dot{width:7px;height:7px;border-radius:50%;background:var(--rosa)}
+
+/* Layout */
+.layout{display:grid;gap:28px;padding-block:20px 36px}
+.menu{min-width:0}
+@media (min-width:960px){.layout{grid-template-columns:minmax(0,1fr) 360px;align-items:start}.basket-col{position:sticky;top:calc(env(safe-area-inset-top,0px) + 70px);max-height:calc(100vh - 90px);overflow:auto}}
+@media (max-width:959.98px){.basket-col{display:none}}
+.sec{scroll-margin-top:72px}
+.sec + .sec{margin-top:34px}
+.sec-head{display:grid;gap:5px;margin-bottom:2px}
+.sec-head h2{font-family:var(--font-display);font-weight:400;font-size:clamp(26px,7vw,34px);line-height:1.05;margin:0;display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px}
+.sec-head p{margin:0;color:var(--ink-soft);font-size:15px;max-width:62ch}
+.new-tag{font-family:var(--font-text);font-size:12.5px;font-weight:800;background:var(--rosa-soft);color:var(--rosa);border-radius:999px;padding:3px 9px;letter-spacing:.02em}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .new-tag{color:var(--rosa)}}
+.divider{display:flex;align-items:center;gap:12px;margin:44px 0 6px;color:var(--ink-soft);font-weight:700;font-size:14px}
+.divider::before,.divider::after{content:"";height:1px;background:var(--line);flex:1}
+.divider svg{flex:none}
+
+/* Rows */
+.rows{list-style:none;margin:0;padding:0}
+@media (min-width:1220px){.rows{display:grid;grid-template-columns:1fr 1fr;column-gap:30px}}
+.row{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding-block:15px;border-bottom:1px solid var(--line)}
+.row-name{margin:0;font-size:17.5px;font-weight:800;line-height:1.2}
+.row-open{background:none;border:0;padding:0;font:inherit;color:inherit;text-align:left}
+.row-open::after{content:"";position:absolute;inset:0}
+.row-open:focus-visible{outline:none}
+.row-open:focus-visible::after{outline:3px solid var(--sol);outline-offset:2px;border-radius:10px}
+.row-desc{margin:4px 0 0;color:var(--ink-soft);font-size:14.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.row-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:8px}
+.price{font-family:var(--font-display);font-size:19px;line-height:1;font-variant-numeric:tabular-nums}
+.meal{font-size:13.5px;font-weight:700;color:var(--teal-ink)}
+.tag{font-size:12.5px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--sol-soft);white-space:nowrap}
+.tag.t-vege{background:var(--verde-soft)}.tag.t-spicy{background:var(--naranja-soft)}.tag.t-new{background:var(--rosa-soft)}.tag.t-cold{background:var(--wall-soft)}.tag.t-alc{background:var(--paper-2)}
+.tile{position:relative;pointer-events:none;width:92px;height:92px;border-radius:18px;display:grid;place-items:center;background-color:var(--tile-sol);background-image:radial-gradient(circle at 3px 3px,var(--tile-dot) 1.3px,transparent 1.6px);background-size:11px 11px;flex:none}
+.tile.wall{background-color:var(--tile-wall)}.tile.rosa{background-color:var(--tile-rosa)}.tile.verde{background-color:var(--tile-verde)}.tile.naranja{background-color:var(--tile-naranja)}.tile.morado{background-color:var(--tile-morado)}
+.art{width:86%;height:86%;display:block}
+.quick{position:absolute;pointer-events:auto;right:-7px;bottom:-7px;z-index:2;width:38px;height:38px;border-radius:50%;border:0;background:var(--rosa);color:var(--rosa-ink);display:grid;place-items:center;box-shadow:0 0 0 3px var(--paper)}
+
+/* Kit card */
+.kitcard{margin-top:14px;display:grid;gap:14px;background:var(--paper-2);border-radius:22px;padding:16px;border:1px solid var(--line)}
+@media (min-width:700px){.kitcard{grid-template-columns:200px minmax(0,1fr);align-items:center}}
+.kitcard .tile{width:100%;height:150px;border-radius:16px}
+.kitcard .art{width:150px;height:150px}
+.kit-sizes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.ks{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px;display:grid;gap:2px;font-size:13.5px}
+.ks b{font-size:15px}
+.ks .price{font-size:18px}
+.kitcard-cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:800;background:var(--rosa);color:var(--rosa-ink);font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+.btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn.wall{background:var(--wall);color:var(--wall-ink)}
+.btn:disabled{opacity:.45}
+
+/* Basket */
+.bp{display:grid;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px}
+.sheet .bp{border:0;padding:0;background:transparent}
+.bp-title{font-family:var(--font-display);font-weight:400;font-size:24px;line-height:1;margin:0}
+.bp-empty{margin:0;color:var(--ink-soft);font-size:15px}
+.bl{list-style:none;margin:0;padding:0;display:grid}
+.bl-line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;padding-block:10px;border-bottom:1px solid var(--line)}
+.bl-main{display:grid;gap:2px;min-width:0}
+.bl-main b{font-weight:800}
+.bl-opt{font-size:13.5px;color:var(--ink-soft)}
+.bl-note{font-size:13.5px;font-style:italic;color:var(--ink-soft)}
+.bl-side{display:grid;justify-items:end;gap:6px;align-content:start}
+.bl-price{font-weight:800;font-variant-numeric:tabular-nums}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--paper)}
+.qty button{width:40px;height:40px;border:0;background:transparent;display:grid;place-items:center;border-radius:10px}
+@media (max-width:359.98px){.sheet-foot .qty button{width:34px}.sheet-foot .qty span{min-width:18px}}
+.qty span{min-width:22px;text-align:center;font-weight:800;font-variant-numeric:tabular-nums}
+.qty.sm button{width:32px;height:32px}
+.suggest{display:grid;gap:8px}
+.suggest-row{display:flex;flex-wrap:wrap;gap:8px}
+.sug{border:1.5px dashed var(--ink-soft);background:transparent;border-radius:12px;padding:7px 11px;font-weight:700;font-size:13.5px}
+.check{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;font-size:14px;cursor:pointer}
+.check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--rosa)}
+.promo{display:flex;gap:8px}
+.promo input{flex:1;min-width:0;border:1.5px solid var(--line);background:var(--paper-2);border-radius:12px;padding:9px 12px;text-transform:uppercase}
+.msg{margin:0;font-size:13.5px;font-weight:700}
+.msg.ok{color:var(--ok)}.msg.bad{color:var(--crit)}
+.totals{display:grid;gap:4px;font-variant-numeric:tabular-nums;margin:0}
+.totals div{display:flex;justify-content:space-between;gap:12px;font-size:14.5px}
+.totals dt{color:var(--ink-soft)}.totals dd{margin:0}
+.totals .grand{font-weight:800;font-size:17px;padding-top:6px;border-top:1px solid var(--line)}
+.totals .grand dt{color:var(--ink)}
+.block{margin:0;font-size:14px;font-weight:700;color:var(--crit)}
+.btn-main{width:100%;border:0;border-radius:14px;background:var(--rosa);color:var(--rosa-ink);font-weight:800;padding:14px 16px;font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.btn-main:disabled{opacity:.45}
+.basket-bar{position:fixed;left:0;right:0;bottom:0;z-index:25;padding:14px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:linear-gradient(to top,var(--paper) 62%,transparent)}
+.basket-btn{width:100%;max-width:560px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;border:0;border-radius:16px;background:var(--rosa);color:var(--rosa-ink);padding:14px 18px;font-weight:800;font-size:16px;box-shadow:var(--shadow-pop)}
+.bb-l{display:flex;align-items:center;gap:10px}
+.bb-n{background:var(--rosa-ink);color:var(--rosa);border-radius:999px;min-width:24px;height:24px;display:grid;place-items:center;font-size:13px;padding:0 6px}
+@media (min-width:960px){.basket-bar{display:none}}
+
+/* Footer */
+.foot{border-top:1px solid var(--line);padding-block:26px 120px;display:grid;gap:14px;font-size:14px;color:var(--ink-soft)}
+.foot p{margin:0}
+.foot b{color:var(--ink)}
+.carte-link{display:flex;justify-content:space-between;align-items:center;gap:14px;width:100%;text-align:left;border:1.5px solid var(--line);background:var(--paper-2);border-radius:16px;padding:14px 16px;color:var(--ink)}
+.carte-link b{display:block;font-family:var(--font-display);font-weight:400;font-size:20px;line-height:1.1}
+.carte-link span{font-size:14px;color:var(--ink-soft)}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 16px}
+.foot-links button{background:none;border:0;padding:0;color:var(--ink);text-decoration:underline;text-underline-offset:3px;font-size:14px}
+.foot-demo{border:1.5px dashed var(--ink-soft);border-radius:12px;padding:10px 12px}
+
+/* Sheets */
+#sheet{position:fixed;inset:0;z-index:50;display:grid;align-items:end;justify-items:center}
+#sheet[hidden]{display:none}
+.sheet-back{position:absolute;inset:0;background:var(--scrim)}
+.sheet{position:relative;width:100%;max-width:640px;max-height:calc(100% - 28px - env(safe-area-inset-top,0px));background:var(--paper);border-radius:22px 22px 0 0;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow-pop);animation:up .22s ease-out}
+@keyframes up{from{transform:translateY(28px);opacity:.6}to{transform:none;opacity:1}}
+@media (min-width:760px){#sheet{align-items:center}.sheet{border-radius:22px;max-height:calc(100% - 56px)}}
+.sh-top{flex:none;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:60px;padding:9px max(10px,env(safe-area-inset-right,0px)) 9px max(18px,env(safe-area-inset-left,0px));background:var(--paper);border-bottom:1px solid var(--line)}
+.sh-top > :first-child{flex:1 1 auto;min-width:0}
+.sh-top.tile-top{border-bottom:0;background-color:var(--tile-sol);background-image:radial-gradient(circle at 3px 3px,var(--tile-dot) 1.3px,transparent 1.6px);background-size:12px 12px}
+.sh-top.wall{background-color:var(--tile-wall)}.sh-top.rosa{background-color:var(--tile-rosa)}.sh-top.verde{background-color:var(--tile-verde)}.sh-top.naranja{background-color:var(--tile-naranja)}.sh-top.morado{background-color:var(--tile-morado)}
+.sh-close{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:var(--paper);color:var(--ink);display:grid;place-items:center;box-shadow:0 2px 10px -4px rgba(0,0,0,.4)}
+.sheet-scroll{position:relative;overflow:auto;overscroll-behavior:contain;flex:1 1 auto;min-height:0}
+.sheet-foot{flex:none;border-top:1px solid var(--line);padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;gap:10px;align-items:center;background:var(--paper)}
+.sh-art{height:118px;display:grid;place-items:center;background-color:var(--tile-sol);background-image:radial-gradient(circle at 3px 3px,var(--tile-dot) 1.3px,transparent 1.6px);background-size:12px 12px}
+.sh-art.wall{background-color:var(--tile-wall)}.sh-art.rosa{background-color:var(--tile-rosa)}.sh-art.verde{background-color:var(--tile-verde)}.sh-art.naranja{background-color:var(--tile-naranja)}.sh-art.morado{background-color:var(--tile-morado)}
+.sh-art .art{width:128px;height:128px}
+.pad{padding:18px max(18px,env(safe-area-inset-right,0px)) 22px max(18px,env(safe-area-inset-left,0px));display:grid;gap:16px}
+.sh-title{font-family:var(--font-display);font-weight:400;font-size:30px;line-height:1.05;margin:0}
+.sh-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-top:-8px}
+.sh-desc{margin:0;font-size:15.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.story{background:var(--paper-2);border-radius:16px;padding:12px 14px;display:grid;gap:4px}
+.story h3{margin:0;font-size:14px;font-weight:800;color:var(--ink-soft)}
+.story p{margin:0;font-size:15px}
+fieldset{border:0;padding:0;margin:0;min-width:0;display:grid;gap:8px}
+legend{font-weight:800;font-size:15px;padding:0;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);border-radius:12px;padding:8px 12px;font-weight:700;font-size:14.5px;cursor:pointer;background:var(--paper)}
+.opt small{font-weight:600;color:var(--ink-soft)}
+input:checked + .opt{border-color:var(--wall);background:var(--wall-soft)}
+input:focus-visible + .opt{outline:3px solid var(--sol);outline-offset:2px}
+input:disabled + .opt{opacity:.45;cursor:not-allowed;text-decoration:line-through}
+.opt-group-label{font-size:13px;font-weight:700;color:var(--ink-soft);width:100%;margin-top:2px}
+.field{display:grid;gap:6px;min-width:0;position:relative}
+.field label{font-weight:700;font-size:14px}
+.field input,.field textarea,.field select{border:1.5px solid var(--line);background:var(--paper-2);border-radius:12px;padding:11px 12px;width:100%;min-width:0}
+.field textarea{resize:vertical}
+.hint{margin:0;font-size:13.5px;color:var(--ink-soft)}
+.err{margin:0;color:var(--crit);font-weight:700;font-size:14px}
+.demo-hint{margin:0;font-size:13.5px;font-weight:700;color:var(--teal-ink)}
+
+/* Photo strip */
+.ph{border-radius:16px;overflow:hidden;background:var(--paper-2);border:1px solid var(--line)}
+.ph-toggle{position:relative;display:block;width:100%;border:0;padding:0;background:none;height:96px;overflow:hidden}
+.ph-toggle img{width:100%;height:100%;object-fit:cover;filter:blur(12px) saturate(1.15);transform:scale(1.15)}
+.ph-toggle span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6);font-size:15px}
+.ph-open{display:grid;gap:8px;padding:8px}
+.ph-imgs{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory}
+.ph-imgs img{flex:0 0 100%;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;scroll-snap-align:start;background:var(--paper)}
+.ph-imgs.two img{flex-basis:88%}
+.ph-imgs img.product{object-fit:contain;background:#fff}
+.ph-cap{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;font-size:13px;color:var(--ink-soft);padding:0 4px 2px}
+.ph-cap button{flex:none}
+
+/* Flavours */
+.flav{display:grid;gap:10px}
+.flav h3,.info-h{margin:0;font-size:15px;font-weight:800}
+.ingr{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ingr li{font-size:14.5px;display:grid;gap:1px}
+.ingr b{font-weight:800}
+.ingr a{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:700;color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px;justify-self:start}
+.info{border:1px solid var(--line);border-radius:14px;padding:4px 14px;background:var(--paper-2)}
+.info summary{cursor:pointer;font-weight:800;padding:10px 0;font-size:15px}
+.info-body{display:grid;gap:10px;padding-bottom:12px}
+.info-row{display:grid;gap:2px;font-size:14.5px}
+.info-row b{font-size:13px;color:var(--ink-soft);font-weight:700}
+.todo{display:inline-block;border:1.5px dashed var(--ink-soft);border-radius:8px;padding:0 8px;font-weight:700;font-size:13.5px;justify-self:start}
+.legal-box{border-left:4px solid var(--sol);padding:6px 10px;display:grid;gap:4px;font-size:13.5px}
+
+/* Kit builder */
+.steps-h{display:flex;align-items:center;gap:10px;margin:0;font-size:17px;font-weight:800}
+.steps-h i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--wall);color:var(--wall-ink);display:grid;place-items:center;font-size:14px;flex:none}
+.sizes{display:grid;gap:10px}
+.size{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;border:1.5px solid var(--line);border-radius:16px;padding:12px;cursor:pointer;background:var(--paper)}
+input:checked + .size{border-color:var(--wall);background:var(--wall-soft)}
+input:focus-visible + .size{outline:3px solid var(--sol);outline-offset:2px}
+.size b{font-size:17px}
+.size .small{font-size:13.5px}
+.tacos-dots{display:grid;grid-template-columns:repeat(5,9px);gap:3px;width:57px}
+.tacos-dots i{width:9px;height:9px;border-radius:50%;background:var(--f-tortilla-dk)}
+.fills{display:grid;gap:10px}
+@media (min-width:560px){.fills{grid-template-columns:1fr 1fr}}
+.fill{display:grid;grid-template-columns:56px minmax(0,1fr);gap:10px;align-items:start;border:1.5px solid var(--line);border-radius:16px;padding:10px;cursor:pointer;background:var(--paper)}
+.fill svg{width:56px;height:56px}
+input:checked + .fill{border-color:var(--wall);background:var(--wall-soft)}
+input:focus-visible + .fill{outline:3px solid var(--sol);outline-offset:2px}
+input:disabled + .fill{opacity:.45;cursor:not-allowed}
+.fill b{font-size:16px}
+.fill p{margin:2px 0 0;font-size:13.5px;color:var(--ink-soft)}
+.fill .tags{margin-top:6px}
+.box-list{margin:0;padding-left:20px;display:grid;gap:4px;font-size:14.5px}
+.howto{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;counter-reset:h}
+.howto li{background:var(--paper-2);border-radius:14px;padding:10px;font-size:13.5px;display:grid;gap:6px;counter-increment:h}
+.howto li::before{content:counter(h);width:24px;height:24px;border-radius:50%;background:var(--sol);color:#1E2A2B;font-weight:800;display:grid;place-items:center;font-size:13px}
+.fiesta{border:1.5px dashed var(--teal-ink);border-radius:16px;padding:12px 14px;display:grid;gap:6px}
+.fiesta b{font-size:16px}
+
+/* Checkout */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;list-style:none;margin:0;padding:0}
+.steps li{position:relative;min-width:0}
+.steps li::before{content:"";display:block;height:5px;border-radius:3px;background:var(--line)}
+.steps li.on::before{background:var(--rosa)}
+.steps-wrap{min-width:0}
+.steps-cur{margin:7px 0 0;font-size:13px;font-weight:700;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--paper-2);border-radius:14px;padding:4px}
+.seg button{border:0;background:transparent;border-radius:11px;padding:10px 8px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px}
+.seg button[aria-pressed="true"]{background:var(--paper);box-shadow:0 1px 0 var(--line),0 6px 16px -10px rgba(0,0,0,.4)}
+.sugg{list-style:none;margin:0;padding:4px;display:grid;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.sugg button{width:100%;text-align:left;border:0;background:transparent;border-radius:9px;padding:9px 10px;display:flex;justify-content:space-between;gap:10px;font-size:14.5px}
+.sugg button:hover{background:var(--paper-2)}
+.sugg small{color:var(--ink-soft)}
+.commune{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;background:var(--wall-soft);border-radius:14px;padding:10px 12px}
+.commune b{font-size:15px}
+.cchips{display:flex;flex-wrap:wrap;gap:6px}
+.cchip{border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 11px;font-weight:700;font-size:13.5px}
+.island{width:100%;max-width:460px;height:auto;display:block}
+#w-sugg:empty,#w-zone:empty,#w-slots:empty,#w-err:empty{display:none}
+.island-wrap{display:grid;gap:4px}
+.alert{background:var(--naranja-soft);border-radius:14px;padding:12px 14px;display:grid;gap:8px;font-size:14.5px}
+.alert p{margin:0}
+.code{display:grid;justify-items:center;gap:4px;background:var(--wall);color:var(--wall-ink);border-radius:18px;padding:16px}
+.code small{font-weight:700;opacity:.85}
+.code strong{font-family:var(--font-display);font-weight:400;font-size:40px;letter-spacing:.06em;line-height:1}
+.code p{margin:0;font-size:13.5px;text-align:center;opacity:.9}
+.recap{border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:grid;gap:6px;font-size:14.5px}
+.recap ul{margin:0;padding-left:18px;display:grid;gap:2px}
+.recap .tot{font-weight:800}
+.raw{white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;background:var(--paper-2);border-radius:12px;padding:10px;margin:8px 0 0;max-height:240px;overflow:auto}
+.send{display:grid;gap:8px}
+.send .btn{width:100%;padding:14px 16px;font-size:16px}
+.callbox{background:var(--paper-2);border-radius:14px;padding:12px 14px;display:grid;gap:6px;font-size:14.5px}
+.chat{display:grid;gap:8px;background:var(--paper-2);border-radius:18px;padding:12px}
+.bub{max-width:88%;border-radius:16px;padding:10px 12px;font-size:14.5px;white-space:pre-wrap}
+.bub.me{justify-self:end;background:var(--wall);color:var(--wall-ink);border-bottom-right-radius:4px}
+.bub.them{justify-self:start;background:var(--paper);border:1px solid var(--line);border-bottom-left-radius:4px}
+.typing{justify-self:start;display:flex;gap:4px;padding:10px 12px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--ink-soft);animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* Restaurant menu page */
+.carte{padding-block:0 40px}
+.carte-top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--wall);color:var(--wall-ink)}
+.carte-top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.carte-top button{border:1.5px solid var(--wall-ink);background:transparent;color:var(--wall-ink);border-radius:999px;padding:6px 12px;font-weight:800;display:inline-flex;align-items:center;gap:6px}
+.carte-head{background:var(--wall);color:var(--wall-ink);padding-block:4px 26px}
+.carte-head h1{font-family:var(--font-display);font-weight:400;font-size:clamp(34px,9vw,56px);line-height:1.02;margin:0}
+.carte-head p{margin:8px 0 0;max-width:56ch}
+.carte-grid{display:grid;gap:30px;padding-block:24px}
+@media (min-width:900px){.carte-grid{grid-template-columns:1fr 1fr;column-gap:44px}}
+.cs h2{font-family:var(--font-display);font-weight:400;font-size:26px;margin:0 0 4px}
+.cs .note{margin:0 0 6px;color:var(--ink-soft);font-size:14.5px}
+.ci{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;padding-block:9px;border-bottom:1px dotted var(--pino)}
+.ci b{font-weight:800}
+.ci .p{font-family:var(--font-display);font-variant-numeric:tabular-nums}
+.ci p{grid-column:1 / -1;margin:0;font-size:14px;color:var(--ink-soft)}
+.cs-wide{grid-column:1 / -1}
+.ttab-wrap{overflow-x:auto}
+.ttab{width:100%;border-collapse:collapse;font-size:14.5px}
+.ttab th,.ttab td{text-align:left;padding:9px 8px;border-bottom:1px dotted var(--pino);vertical-align:top}
+.ttab th{font-size:13px;color:var(--ink-soft)}
+.ttab td.n,.ttab th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ttab td.n{font-family:var(--font-display)}
+.ttab td small{display:block;color:var(--ink-soft);font-size:13.5px}
+.fn{margin:0;padding-left:0;list-style:none;display:grid;gap:4px;font-size:14px;color:var(--ink-soft)}
+
+#toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:12px;font-weight:700;font-size:14px;max-width:calc(100% - 32px);width:max-content;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.show{opacity:1}
+</style>
+
+<div id="app"></div>
+<div id="sheet" hidden></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+'use strict';
+
+/* ================= reference data ================= */
+const KEY = 'takitos-chez-vous-v1';
+const ORDER_LINE = '07 70 02 12 95';
+const FIXED_LINE = '05 46 08 67 39';
+
+const ALLERGENS = {
+  gluten:{fr:'Gluten',en:'Gluten'}, crustaces:{fr:'Crustacés',en:'Crustaceans'}, oeufs:{fr:'Œufs',en:'Eggs'}, poisson:{fr:'Poisson',en:'Fish'},
+  arachides:{fr:'Arachides',en:'Peanuts'}, soja:{fr:'Soja',en:'Soy'}, lait:{fr:'Lait',en:'Milk'}, fruitsacoque:{fr:'Fruits à coque',en:'Tree nuts'},
+  celeri:{fr:'Céleri',en:'Celery'}, moutarde:{fr:'Moutarde',en:'Mustard'}, sesame:{fr:'Sésame',en:'Sesame'}, sulfites:{fr:'Sulfites',en:'Sulphites'},
+  lupin:{fr:'Lupin',en:'Lupin'}, mollusques:{fr:'Mollusques',en:'Molluscs'}
+};
+const TASTES = {
+  frais:{fr:'Frais',en:'Fresh'}, acidule:{fr:'Acidulé',en:'Tangy'}, releve:{fr:'Relevé',en:'Spicy'}, fume:{fr:'Fumé',en:'Smoky'},
+  fondant:{fr:'Fondant',en:'Tender'}, croustillant:{fr:'Croustillant',en:'Crispy'}, herbace:{fr:'Herbacé',en:'Herby'}, doux:{fr:'Doux',en:'Mild'},
+  gourmand:{fr:'Gourmand',en:'Rich'}, sucresale:{fr:'Sucré-salé',en:'Sweet and savoury'}, tropical:{fr:'Tropical',en:'Tropical'},
+  epice:{fr:'Épicé',en:'Warm spice'}, cremeux:{fr:'Crémeux',en:'Creamy'}, petillant:{fr:'Pétillant',en:'Fizzy'}, fruite:{fr:'Fruité',en:'Fruity'},
+  malte:{fr:'Malté',en:'Malty'}, caramel:{fr:'Caramel',en:'Caramel'}, rafraichissant:{fr:'Rafraîchissant',en:'Refreshing'}, sucre:{fr:'Sucré',en:'Sweet'}
+};
+/* ingredient notes: what each brings, said plainly; q = web search terms */
+const INGR = {
+  bun:{n:{fr:'Pain au fromage',en:'Cheese bun'}, t:{fr:'Fait maison et sans gluten : moelleux, avec un vrai goût de fromage.',en:'Homemade and gluten-free: soft, with a real cheese taste.'}, q:'pain au fromage colombien'},
+  oaxaca:{n:{fr:'Oaxaca',en:'Oaxaca'}, t:{fr:'Fromage mexicain doux et filant, proche de la mozzarella.',en:'Mild, stringy Mexican cheese, close to mozzarella.'}, q:'fromage oaxaca'},
+  guacamole:{n:{fr:'Guacamole',en:'Guacamole'}, t:{fr:'Avocat écrasé au citron vert : frais et onctueux.',en:'Mashed avocado with lime: fresh and smooth.'}, q:'guacamole'},
+  chimichurri:{n:{fr:'Chimichurri',en:'Chimichurri'}, t:{fr:'Sauce argentine aux herbes, à l’ail et au vinaigre : vive et acidulée.',en:'Argentinian herb, garlic and vinegar sauce: bright and tangy.'}, q:'sauce chimichurri'},
+  ceviche:{n:{fr:'Ceviche',en:'Ceviche'}, t:{fr:'Poisson cru mariné dans le jus de citron : frais et acidulé.',en:'Raw fish cured in lime juice: fresh and tangy.'}, q:'ceviche'},
+  coriandre:{n:{fr:'Coriandre',en:'Coriander'}, t:{fr:'Herbe fraîche aux notes citronnées, généreuse chez nous. Pas fan ? Écrivez « sans coriandre » dans la précision.',en:'Fresh herb with citrus notes, used generously here. Not a fan? Write “no coriander” in the note.'}, q:'coriandre'},
+  cayenne:{n:{fr:'Piment de Cayenne',en:'Cayenne pepper'}, t:{fr:'Une chaleur franche.',en:'A clear heat.'}, q:'piment de cayenne'},
+  totopos:{n:{fr:'Totopos',en:'Totopos'}, t:{fr:'Tortillas de maïs grillées, à tremper.',en:'Toasted corn tortillas, for dipping.'}, q:'totopos'},
+  plantain:{n:{fr:'Banane plantain',en:'Plantain'}, t:{fr:'Farineuse et peu sucrée, plus proche de la pomme de terre que du dessert.',en:'Starchy and barely sweet, closer to a potato than a dessert.'}, q:'banane plantain'},
+  patatedouce:{n:{fr:'Patate douce',en:'Sweet potato'}, t:{fr:'Naturellement douce, en frites croustillantes.',en:'Naturally sweet, as crispy fries.'}, q:'patate douce'},
+  salsaverde:{n:{fr:'Salsa verde',en:'Salsa verde'}, t:{fr:'Tomate verte, oignon blanc, coriandre, citron vert et jalapeño : vive et légèrement piquante.',en:'Green tomato, white onion, coriander, lime and jalapeño: bright and gently hot.'}, q:'salsa verde mexicaine'},
+  pico:{n:{fr:'Pico de gallo',en:'Pico de gallo'}, t:{fr:'Tomate, oignon et coriandre crus : frais et croquant.',en:'Raw tomato, onion and coriander: fresh and crunchy.'}, q:'pico de gallo'},
+  pimientos:{n:{fr:'Purée de piments',en:'Chilli purée'}, t:{fr:'Elle pique : à doser selon votre goût.',en:'It’s hot: add to taste.'}, q:'purée de piments'},
+  chorizo:{n:{fr:'Chorizo',en:'Chorizo'}, t:{fr:'Charcuterie au paprika : fumée et relevée.',en:'Paprika sausage: smoky and spicy.'}, q:'chorizo'},
+  canard:{n:{fr:'Canard confit',en:'Duck confit'}, t:{fr:'Cuit lentement dans sa graisse : fondant et riche.',en:'Slow-cooked in its own fat: tender and rich.'}, q:'canard confit'},
+  cornflakes:{n:{fr:'Panure aux corn flakes',en:'Corn-flake crust'}, t:{fr:'Plus croustillante qu’une chapelure classique.',en:'Crunchier than ordinary breadcrumbs.'}, q:'poulet pané corn flakes'},
+  goyave:{n:{fr:'Goyave',en:'Guava'}, t:{fr:'Fruit tropical au parfum floral, doux et rond.',en:'Tropical fruit with a floral scent, soft and round.'}, q:'goyave fruit'},
+  maltgrille:{n:{fr:'Malt grillé',en:'Toasted malt'}, t:{fr:'Des notes de caramel et de pain grillé.',en:'Notes of caramel and toast.'}, q:'malt grillé bière'},
+  quinoa:{n:{fr:'Quinoa',en:'Quinoa'}, t:{fr:'Grain des Andes, légèrement croquant, au goût doux.',en:'Andean grain, slightly crunchy, mild in taste.'}, q:'quinoa con leche'},
+  cannelle:{n:{fr:'Cannelle',en:'Cinnamon'}, t:{fr:'Épice chaude et douce.',en:'Warm, sweet spice.'}, q:'cannelle'},
+  arequipe:{n:{fr:'Arequipe',en:'Arequipe'}, t:{fr:'Confiture de lait colombienne, au goût de caramel.',en:'Colombian milk jam that tastes of caramel.'}, q:'arequipe'},
+  chia:{n:{fr:'Graines de chia',en:'Chia seeds'}, t:{fr:'Goût neutre ; elles donnent une texture perlée.',en:'Neutral taste; they give a pearly texture.'}, q:'graines de chia'},
+  maracuya:{n:{fr:'Maracuyá',en:'Maracuyá'}, t:{fr:'Le fruit de la passion : acidulé et très parfumé.',en:'Passion fruit: tangy and very fragrant.'}, q:'maracuyá fruit de la passion'},
+  coco:{n:{fr:'Lait de coco',en:'Coconut milk'}, t:{fr:'Doux et crémeux.',en:'Mild and creamy.'}, q:'lait de coco'},
+  maizmorado:{n:{fr:'Maïs violet',en:'Purple corn'}, t:{fr:'Maïs des Andes aux grains violets ; infusé, il donne sa couleur et des notes fruitées.',en:'Andean corn with purple kernels; steeped, it gives colour and fruity notes.'}, q:'maïs violet maíz morado'}
+};
+
+const CATS = [
+  {id:'tortas', fr:'Tortas', en:'Tortas', intro:{fr:'Notre spécialité : un pain maison sans gluten, fourré au fromage. Seule, ou en menu avec frites de patates douces et boisson.', en:'Our speciality: a homemade gluten-free bun, stuffed with cheese. On its own, or as a meal with sweet potato fries and a drink.'}},
+  {id:'entrees', fr:'Entrées', en:'Starters', intro:{fr:'Servies avec totopos et salade.', en:'Served with totopos and salad.'}},
+  {id:'petites', fr:'Petites faims', en:'Small bites'},
+  {id:'plats', fr:'Plats', en:'Mains', intro:{fr:'Servis avec frites de patates douces et salade.', en:'Served with sweet potato fries and salad.'}},
+  {id:'enfant', fr:'Menu enfant', en:'Kids', intro:{fr:'Jusqu’à 10 ans.', en:'Up to age 10.'}},
+  {id:'boissons', fr:'Boissons', en:'Drinks'},
+  {id:'latinos', fr:'Boissons d’Amérique latine', en:'Latin American drinks', chip:{fr:'Boissons latines',en:'Latin drinks'}, isNew:true, intro:{fr:'Sodas et bières venus du Mexique et de Colombie, choisis pour aller avec nos plats.', en:'Sodas and beers from Mexico and Colombia, picked to go with our food.'}},
+  {id:'kit', fr:'Le Kit Takit’os', en:'The Takit’os Kit', chip:{fr:'Kit tacos',en:'Taco kit'}, isNew:true},
+  {id:'desserts', fr:'Desserts', en:'Desserts', isNew:true, intro:{fr:'En pot fermé, servis frais.', en:'In sealed pots, served chilled.'}}
+];
+
+const SODAS = ['Coca-Cola','Coca-Cola zéro','Orangina','Lipton pêche','Perrier','Oasis Tropical','Sprite','Oasis Cassis Framboise'];
+const JUICES = [{fr:'Orange',en:'Orange'},{fr:'Banane',en:'Banana'},{fr:'Multifruits',en:'Mixed fruit'},{fr:'Ananas',en:'Pineapple'},{fr:'Fraise',en:'Strawberry'},{fr:'Pomme',en:'Apple'}];
+const PH_TORTAS = {files:['img/torta-crispy.jpg','img/torta-plate.jpg'], alt:{fr:'Tortas servies en salle',en:'Tortas served in the dining room'}, cap:{fr:'Photos du restaurant : tortas servies en salle, avec frites et salade.', en:'Restaurant photos: tortas as served in the dining room, with fries and salad.'}};
+
+const ITEMS = [
+  {id:'t-crispy', cat:'tortas', price:12, meal:2.5, art:'torta', v:'poulet', tile:'sol', tags:['gf'], meat:'poulet', allergens:['lait','gluten','oeufs'], tastes:['croustillant','frais'], ingr:['bun','cornflakes'], photos:PH_TORTAS,
+    name:{fr:'Poulet crispy',en:'Crispy chicken'}, desc:{fr:'Poulet pané aux corn flakes, guacamole, oignon rouge, roquette, tomate confite, sauce barbecue maison.',en:'Corn-flake crusted chicken, guacamole, red onion, rocket, confit tomato, house barbecue sauce.'}},
+  {id:'t-pork', cat:'tortas', price:12, meal:2.5, art:'torta', v:'pork', tile:'naranja', tags:['gf'], meat:'porc', allergens:['lait'], tastes:['fondant','gourmand'], ingr:['bun','oaxaca'], photos:PH_TORTAS,
+    name:{fr:'Pulled pork',en:'Pulled pork'}, desc:{fr:'Porc effiloché, fromage oaxaca, guacamole, oignon rouge, roquette, tomate confite, sauce barbecue maison.',en:'Pulled pork, Oaxaca cheese, guacamole, red onion, rocket, confit tomato, house barbecue sauce.'}},
+  {id:'t-chimi', cat:'tortas', price:13, meal:2.5, art:'torta', v:'fish', tile:'verde', tags:['gf'], allergens:['lait','poisson','gluten','oeufs','moutarde','sulfites'], tastes:['herbace','acidule','croustillant'], ingr:['bun','chimichurri'], photos:PH_TORTAS,
+    name:{fr:'Chimichurri',en:'Chimichurri'}, desc:{fr:'Poisson du jour pané, guacamole, oignon rouge, roquette, tomate confite, chimichurri, mayonnaise.',en:'Breaded fish of the day, guacamole, red onion, rocket, confit tomato, chimichurri, mayonnaise.'}},
+  {id:'t-cheese', cat:'tortas', price:13, meal:2.5, art:'torta', v:'beef', tile:'rosa', tags:['gf'], meat:'boeuf', allergens:['lait'], tastes:['gourmand','fondant'], ingr:['bun'], photos:PH_TORTAS,
+    name:{fr:'Mexican cheese',en:'Mexican cheese'}, desc:{fr:'Steak haché, cheddar, oignon rouge, roquette, tomate confite, sauce barbecue maison.',en:'Beef patty, cheddar, red onion, rocket, confit tomato, house barbecue sauce.'}},
+  {id:'t-veggie', cat:'tortas', price:12, meal:2, art:'torta', v:'veg', tile:'verde', tags:['gf','vege'], allergens:['lait'], tastes:[], ingr:['bun'], photos:PH_TORTAS,
+    name:{fr:'Veggie du moment',en:'Veggie of the moment'}, desc:{fr:'La garniture végétarienne change avec le marché ; la recette du jour s’affiche ici.',en:'The vegetarian filling changes with the market; today’s recipe shows here.'}},
+  {id:'e-ceviche', cat:'entrees', price:9, art:'ceviche', tile:'wall', tags:['spicy'], allergens:['poisson'], tastes:['frais','acidule','releve'], ingr:['ceviche','coriandre','cayenne','totopos'],
+    name:{fr:'Ceviche',en:'Ceviche'}, desc:{fr:'Poisson du moment, avocat, mangue, oignon, tomate, ciboulette, coriandre, jus de citron, piment de Cayenne.',en:'Fish of the moment, avocado, mango, onion, tomato, chives, coriander, lime juice, cayenne pepper.'}},
+  {id:'e-cocktail', cat:'entrees', price:8, art:'shrimp', tile:'rosa', allergens:['crustaces','oeufs','moutarde'], tastes:['frais','doux'], ingr:['coriandre','totopos'],
+    name:{fr:'Cocktail de crevettes',en:'Shrimp cocktail'}, desc:{fr:'Crevettes, avocat, sauce cocktail maison, oignon, tomate, coriandre, citron vert.',en:'Shrimp, avocado, house cocktail sauce, onion, tomato, coriander, lime.'}},
+  {id:'p-patacones', cat:'petites', price:4.5, art:'patacones', tile:'sol', tags:['vege'], allergens:[], tastes:['croustillant'], ingr:['plantain'],
+    name:{fr:'Patacones',en:'Patacones'}, desc:{fr:'Galettes frites d’écrasé de banane plantain.',en:'Fried patties of smashed green plantain.'}},
+  {id:'p-frites', cat:'petites', price:4, art:'fries', tile:'naranja', tags:['vege'], allergens:[], tastes:['sucresale','croustillant'], ingr:[],
+    name:{fr:'Frites de patates douces',en:'Sweet potato fries'}, desc:{fr:'En accompagnement, comme dans nos plats.',en:'As a side, the same as with our mains.'}},
+  {id:'p-tenders', cat:'petites', price:6, art:'tenders', tile:'sol', meat:'poulet', allergens:['gluten','oeufs'], tastes:['croustillant'], ingr:[],
+    name:{fr:'Tenders de poulet crispy',en:'Crispy chicken tenders'}, desc:{fr:'Tenders de poulet croustillants, à grignoter.',en:'Crispy chicken tenders, to snack on.'}},
+  {id:'pl-tenders', cat:'plats', price:14, art:'plate', tile:'verde', meat:'poulet', allergens:['gluten','oeufs'], tastes:['croustillant'], ingr:[],
+    name:{fr:'Tenders de poulet',en:'Chicken tenders'}, desc:{fr:'Classiques ou caramélisés, avec frites de patates douces et salade.',en:'Classic or caramelised, with sweet potato fries and salad.'}},
+  {id:'pl-fish', cat:'plats', price:15, art:'fish', tile:'wall', allergens:['poisson','gluten','oeufs'], tastes:['croustillant'], ingr:[],
+    name:{fr:'Fish and chips',en:'Fish and chips'}, desc:{fr:'Poisson pané, frites de patates douces et salade.',en:'Breaded fish, sweet potato fries and salad.'}},
+  {id:'k-menu', cat:'enfant', price:9, art:'kids', tile:'rosa', meat:'poulet', allergens:['gluten','oeufs','lait'], tastes:[], ingr:[],
+    name:{fr:'Menu enfant',en:'Kids’ menu'}, desc:{fr:'Tenders de poulet ou fish pané, frites, un sirop au choix et une glace.',en:'Chicken tenders or breaded fish, fries, a syrup drink and an ice cream.'}},
+  {id:'d-soda', cat:'boissons', price:3, art:'can', tile:'wall', allergens:[], tastes:[], ingr:[],
+    name:{fr:'Soda',en:'Soda'}, desc:{fr:'Coca-Cola, Coca-Cola zéro, Orangina, Lipton pêche, Perrier, Oasis, Sprite.',en:'Coca-Cola, Coca-Cola zero, Orangina, Lipton peach, Perrier, Oasis, Sprite.'}},
+  {id:'d-jus', cat:'boissons', price:4, art:'juice', tile:'sol', allergens:[], tastes:[], ingr:[],
+    name:{fr:'Jus de fruits',en:'Fruit juice'}, desc:{fr:'Orange, banane, multifruits, ananas, fraise ou pomme.',en:'Orange, banana, mixed fruit, pineapple, strawberry or apple.'}},
+  {id:'d-corona', cat:'boissons', price:5, art:'bottle', tile:'verde', allergens:['gluten'], alcohol:true, tastes:['rafraichissant'], ingr:[],
+    name:{fr:'Corona 33 cl',en:'Corona 33 cl'}, desc:{fr:'Bière blonde mexicaine, 4,5 %. Servie avec un plat.',en:'Mexican lager, 4.5%. Sold with food.'}},
+  {id:'l-jarritos', cat:'latinos', price:4, art:'jarritos', tile:'naranja', isNew:true, allergens:[], tastes:['petillant','fruite','sucre'], ingr:['goyave'],
+    photos:{files:['img/jarritos.jpg'], product:true, alt:{fr:'Trois bouteilles de verre : mandarine, goyave, pamplemousse',en:'Three glass bottles: mandarin, guava, grapefruit'}, cap:{fr:'Photo d’illustration, logos floutés : les trois parfums proposés.',en:'Illustration photo, logos blurred: the three flavours we offer.'}},
+    name:{fr:'Jarritos',en:'Jarritos'}, desc:{fr:'Soda mexicain en bouteille de verre de 37 cl. Mandarine, goyave ou pamplemousse.',en:'Mexican soda in a 37 cl glass bottle. Mandarin, guava or grapefruit.'},
+    story:{fr:'Né au Mexique en 1950, c’est le soda des taquerias. Mandarine : douce et ensoleillée. Goyave : tropicale et florale. Pamplemousse : acidulée et désaltérante.',en:'Born in Mexico in 1950, it’s the taquería soda. Mandarin: sweet and sunny. Guava: tropical and floral. Grapefruit: tangy and thirst-quenching.'}},
+  {id:'l-colombiana', cat:'latinos', price:3.5, art:'colombiana', tile:'sol', isNew:true, tags:['arrivage'], allergens:[], tastes:['petillant','fruite','sucre'], ingr:[],
+    photos:{files:['img/colombiana.jpg'], alt:{fr:'Canette jaune et verre de soda orangé',en:'Yellow can and a glass of orange soda'}, cap:{fr:'Photo d’illustration, logo flouté.',en:'Illustration photo, logo blurred.'}},
+    name:{fr:'Colombiana',en:'Colombiana'}, desc:{fr:'Soda colombien en canette, fruité et doux.',en:'Colombian soda in a can, fruity and sweet.'},
+    story:{fr:'Un classique des tables colombiennes, au goût fruité souvent comparé à un « cola champagne ». Il va très bien avec nos tortas.',en:'A Colombian table classic, with a fruity taste often likened to “cola champagne”. It goes well with our tortas.'}},
+  {id:'l-clubcol', cat:'latinos', price:6, art:'clubcol', tile:'rosa', isNew:true, tags:['arrivage'], allergens:['gluten'], alcohol:true, tastes:['malte','rafraichissant'], ingr:[],
+    photos:{files:['img/club-colombia.jpg'], product:true, alt:{fr:'Bouteille de bière ambrée, étiquette floutée',en:'Amber beer bottle, label blurred'}, cap:{fr:'Photo d’illustration, étiquette floutée.',en:'Illustration photo, label blurred.'}},
+    name:{fr:'Club Colombia Dorada',en:'Club Colombia Dorada'}, desc:{fr:'Lager dorée de Colombie, 33 cl, 4,7 %.',en:'Golden lager from Colombia, 33 cl, 4.7%.'},
+    story:{fr:'Une lager colombienne dorée, maltée et ronde, servie bien fraîche.',en:'A golden Colombian lager, malty and round, served well chilled.'}},
+  {id:'l-negra', cat:'latinos', price:6, art:'negra', tile:'morado', isNew:true, allergens:['gluten'], alcohol:true, tastes:['malte','caramel'], ingr:['maltgrille'],
+    name:{fr:'Negra Modelo',en:'Negra Modelo'}, desc:{fr:'Bière brune mexicaine de type Vienne, 35,5 cl, 5,4 %.',en:'Mexican Vienna-style dark beer, 35.5 cl, 5.4%.'},
+    story:{fr:'Une brune mexicaine au malt grillé, aux notes de caramel. Elle répond bien au porc effiloché.',en:'A Mexican dark beer with toasted malt and caramel notes. It pairs well with the pulled pork.'}},
+  {id:'s-tiramisu', cat:'desserts', price:5.5, art:'tiramisu', tile:'sol', isNew:true, cold:true, allergens:['lait','oeufs','gluten'], tastes:['cremeux','fruite'], ingr:[],
+    name:{fr:'Tiramisu en pot',en:'Tiramisu pot'}, desc:{fr:'Le tiramisu de la maison, avec la purée de fruits du moment.',en:'Our house tiramisu, with the fruit purée of the moment.'}},
+  {id:'s-quinoa', cat:'desserts', price:4.5, art:'quinoa', tile:'naranja', isNew:true, cold:true, allergens:['lait'], tastes:['cremeux','epice'], ingr:['quinoa','arequipe'],
+    photos:{files:['img/quinoa.jpg'], alt:{fr:'Quinoa au lait dans un verre, bâtons de cannelle',en:'Quinoa pudding in a glass, cinnamon sticks'}, cap:{fr:'Photo d’illustration, non contractuelle.',en:'Illustration photo, for reference only.'}},
+    name:{fr:'Quinoa con leche',en:'Quinoa con leche'}, desc:{fr:'Quinoa au lait, cannelle, zeste d’orange et filet d’arequipe.',en:'Quinoa cooked in milk, cinnamon, orange zest and a ribbon of arequipe.'},
+    story:{fr:'Dans les Andes, au Pérou et en Bolivie, c’est le riz au lait de la grand-mère, fait avec du quinoa.',en:'In the Andes, in Peru and Bolivia, it’s grandma’s rice pudding, made with quinoa.'}},
+  {id:'s-chia', cat:'desserts', price:5, art:'chia', tile:'sol', isNew:true, cold:true, tags:['vegan'], allergens:[], tastes:['tropical','acidule','cremeux'], ingr:['chia','maracuya'],
+    photos:{files:['img/chia.jpg'], alt:{fr:'Pudding de chia au fruit de la passion dans un verre',en:'Chia pudding with passion fruit in a glass'}, cap:{fr:'Photo d’illustration, non contractuelle : notre recette ne contient pas de noix.',en:'Illustration photo, for reference only: our recipe has no walnuts.'}},
+    name:{fr:'Chia maracuyá',en:'Chia maracuyá'}, desc:{fr:'Chia au lait de coco, fruit de la passion et mangue. Sans produit d’origine animale.',en:'Chia in coconut milk, passion fruit and mango. No animal products.'},
+    story:{fr:'La chia vient du Mexique ; la maracuyá, fruit de la passion, pousse en Colombie et au Pérou. Un pudding perlé, frais et acidulé.',en:'Chia comes from Mexico; maracuyá, passion fruit, grows in Colombia and Peru. A pearly pudding, fresh and tangy.'}},
+  {id:'s-mazamorra', cat:'desserts', price:4.5, art:'mazamorra', tile:'morado', isNew:true, cold:true, tags:['moment'], allergens:['sulfites'], tastes:['fruite','epice'], ingr:['maizmorado'],
+    photos:{files:['img/mazamorra.jpg'], alt:{fr:'Bol de mazamorra violette, épis de maïs violet et cannelle',en:'Bowl of purple mazamorra, purple corn cobs and cinnamon'}, cap:{fr:'Photo d’illustration, non contractuelle.',en:'Illustration photo, for reference only.'}},
+    name:{fr:'Mazamorra morada',en:'Mazamorra morada'}, desc:{fr:'Dessert de Lima au maïs violet, ananas, cannelle et fruits secs.',en:'Lima’s purple-corn pudding with pineapple, cinnamon and dried fruit.'},
+    story:{fr:'Le dessert des fêtes à Lima, au Pérou : une crème épaisse de maïs violet, aux fruits et à la cannelle. Une couleur qu’on ne voit nulle part ailleurs.',en:'Lima’s party dessert in Peru: a thick purple-corn pudding with fruit and cinnamon. A colour you won’t see anywhere else.'}}
+];
+
+/* taco kit: sizes and fillings from the 10 Nov feasibility study and the dine-in card */
+/* contents per the feasibility study: universal garnish + 2 salsas (Solo) or 3 salsas (Duo, Familia) */
+const KIT_SIZES = [
+  {id:'solo', label:'Solo', tacos:5, n:1, price:17, people:{fr:'Pour 1',en:'For 1'},
+    box:{fr:['5 tortillas de maïs chaudes','Salade, oignon, coriandre, citron vert','Salsa verde et purée de piments'], en:['5 warm corn tortillas','Salad, onion, coriander, lime','Salsa verde and chilli purée']}},
+  {id:'duo', label:'Duo', tacos:10, n:2, price:31, people:{fr:'Pour 2',en:'For 2'},
+    box:{fr:['10 tortillas de maïs chaudes, plus 2 en rab','Salade, oignon, coriandre, citron vert','Salsa verde, purée de piments, pico de gallo','Totopos'], en:['10 warm corn tortillas, plus 2 spare','Salad, onion, coriander, lime','Salsa verde, chilli purée, pico de gallo','Totopos']}},
+  {id:'familia', label:'Familia', tacos:20, n:3, price:62, people:{fr:'Pour 4',en:'For 4'},
+    box:{fr:['20 tortillas de maïs chaudes, plus 4 en rab','Salade, oignon, coriandre, citron vert, en double','Salsa verde, purée de piments, pico de gallo, en grands pots','Totopos'], en:['20 warm corn tortillas, plus 4 spare','Salad, onion, coriander, lime, double portion','Salsa verde, chilli purée, pico de gallo, large pots','Totopos']}}
+];
+/* premium = extra per taco: duck is +3 € per 5 tacos */
+const FILLINGS = [
+  {id:'pork', name:'Pulled pork', color:'var(--f-pork)', premium:0, allergens:['lait'], tastes:['fondant','sucresale'], ingr:['oaxaca','coriandre'], meat:'porc',
+    desc:{fr:'Porc mariné, fromage oaxaca, ananas, oignon blanc, coriandre',en:'Marinated pork, Oaxaca cheese, pineapple, white onion, coriander'}},
+  {id:'pollo', name:'El Pollo', color:'var(--f-crumb)', premium:0, allergens:[], tastes:['frais'], ingr:['pico','coriandre'], meat:'poulet',
+    desc:{fr:'Poulet, guacamole, pico de gallo, oignon blanc, coriandre',en:'Chicken, guacamole, pico de gallo, white onion, coriander'}},
+  {id:'jefe', name:'El Jefe', color:'var(--f-tomato)', premium:0, allergens:['lait'], tastes:['fume','releve'], ingr:['chorizo','oaxaca'],
+    desc:{fr:'Chorizo, ananas, queso oaxaca',en:'Chorizo, pineapple, Oaxaca cheese'}},
+  {id:'pato', name:'El Pato', color:'var(--f-beef)', premium:0.6, allergens:[], tastes:['fondant','gourmand'], ingr:['canard','coriandre'], meat:'canard',
+    desc:{fr:'Canard confit, ananas, oignon, coriandre',en:'Duck confit, pineapple, onion, coriander'}}
+];
+const PREORDER_FILLINGS = [
+  {id:'pescado', name:'El Pescado', desc:{fr:'Poisson du moment, guacamole, poivron grillé, chorizo',en:'Fish of the moment, guacamole, grilled pepper, chorizo'}},
+  {id:'gambas', name:'Gambas', desc:{fr:'Gambas, bisque, oignon rouge, mangue, coriandre',en:'Prawns, bisque, red onion, mango, coriander'}},
+  {id:'honguito', name:'El Honguito', desc:{fr:'Girolles, guacamole, pico de gallo',en:'Chanterelles, guacamole, pico de gallo'}}
+];
+const KIT_SIDES = [{id:'patacones', fr:'Patacones', en:'Patacones'}, {id:'frites', fr:'Frites de patates douces', en:'Sweet potato fries'}];
+const DESSERT_OF_DAY = 's-mazamorra';
+const KIT_PHOTO = {files:['img/tacos.jpg'], alt:{fr:'Tacos servis en salle avec salsa verde',en:'Tacos served in the dining room with salsa verde'}, cap:{fr:'Photo du restaurant : tacos servis en salle. Dans le kit, vous les montez vous-même.',en:'Restaurant photo: tacos as served in the dining room. With the kit, you build them yourself.'}};
+
+/* delivery: the 8 communes, from Dolus; fees and minimums are demo values to validate */
+const COMMUNES = [
+  {id:'dolus', name:'Dolus-d’Oléron', short:'Dolus', cp:['17550'], keys:['dolus'], fee:2, min:14, travel:8, x:196, y:47},
+  {id:'stpierre', name:'Saint-Pierre-d’Oléron', short:'Saint-Pierre', cp:['17310'], keys:['saint pierre','st pierre','cotiniere'], fee:2, min:14, travel:12, x:158, y:46},
+  {id:'chateau', name:'Le Château-d’Oléron', short:'Le Château', cp:['17480'], keys:['le chateau','chateau d oleron'], fee:2.5, min:14, travel:14, x:244, y:31},
+  {id:'grandvillage', name:'Le Grand-Village-Plage', short:'Grand-Village', cp:[], keys:['grand village'], fee:3, min:20, travel:16, x:236, y:62},
+  {id:'stgeorges', name:'Saint-Georges-d’Oléron', short:'Saint-Georges', cp:['17190'], keys:['saint georges','st georges','boyardville'], fee:3, min:20, travel:20, x:108, y:41},
+  {id:'sttrojan', name:'Saint-Trojan-les-Bains', short:'Saint-Trojan', cp:[], keys:['saint trojan','st trojan'], fee:3.5, min:25, travel:22, x:290, y:53},
+  {id:'labree', name:'La Brée-les-Bains', short:'La Brée', cp:['17840'], keys:['la bree','bree les bains'], fee:4, min:25, travel:24, x:62, y:31},
+  {id:'stdenis', name:'Saint-Denis-d’Oléron', short:'Saint-Denis', cp:['17650'], keys:['saint denis','st denis'], fee:4.5, min:30, travel:28, x:26, y:45}
+];
+/* villages, ports and beaches by commune (checked against beach listings) */
+const PLACES = [
+  {n:'La Cotinière', c:'stpierre'}, {n:'Matha', c:'stpierre'}, {n:'La Ménounière', c:'stpierre'},
+  {n:'Boyardville', c:'stgeorges'}, {n:'Domino', c:'stgeorges'}, {n:'Chaucre', c:'stgeorges'}, {n:'Les Sables Vigniers', c:'stgeorges'},
+  {n:'Le Douhet', c:'stgeorges'}, {n:'Les Saumonards', c:'stgeorges'}, {n:'La Gautrelle', c:'stgeorges'},
+  {n:'Vert-Bois', c:'dolus'}, {n:'La Rémigeasse', c:'dolus'}, {n:'La Perroche', c:'dolus'},
+  {n:'Gatseau', c:'sttrojan'}, {n:'Les Huttes', c:'stdenis'}, {n:'La Boirie', c:'stdenis'}, {n:'Chassiron', c:'stdenis'},
+  {n:'Planginot', c:'labree'}, {n:'Les Boulassiers', c:'labree'}
+];
+const MAINLAND = ['marennes','bourcefranc','chapus','rochefort','rochelle','royan','tremblade','ronce les bains','brouage','17320','17560','17390','17300','17000','17200'];
+
+/* the dining-room card, transcribed as printed (with spelling fixes) */
+const DINEIN = [
+  {h:'Entrées', items:[['Ceviche','11 €','Servi avec totopos* et salade. Poisson du moment, avocat, oignon rouge, tomates, ciboulette, coriandre, mangue, jus de citron, piment de Cayenne.'],['Cocktail de crevettes','10 €','Servi avec totopos* et salade. Crevettes, avocat, sauce cocktail de la maison, oignon rouge, tomates, coriandre, citron vert.'],['Carpaccio de bœuf','11 €','Servi avec sauce chimichurri et salade.']]},
+  {h:'Tortas', note:'Pain fait maison sans gluten, fourré au fromage. Servies avec frites de patates douces et salade.', items:[['Poulet crispy','16,50 €','Poulet pané aux corn flakes, guacamole, oignon rouge, roquette, chou rouge, tomates confites, sauce barbecue maison.'],['Pulled pork','16,50 €','Porc effiloché, guacamole, roquette, tomates confites, sauce barbecue.'],['Chimichurri','17,50 €','Poisson du jour pané, guacamole, oignon rouge, roquette, tomates confites, chimichurri, mayonnaise.'],['Mexican cheese','17,50 €','Steak haché d’Angus, cheddar, oignon rouge, roquette, tomates confites.'],['Veggie du moment','16 €','']]},
+  {h:'Tacos', wide:true, note:'×2 ou ×3 en entrée ou en tapas, avec salade, purée de piments, citron vert et salsa verde*. ×5 en plat, avec en plus des frites de patates douces.', table:[['Pulled pork','Porc mariné, fromage oaxaca, ananas, oignon blanc, coriandre','6 €','9 €','14 €'],['Arrachera','Bœuf mariné façon arrachera*, queso de Oaxaca','7,50 €','11 €','15 €'],['El Pollo','Poulet, guacamole, pico de gallo*, oignon blanc, coriandre','7 €','10 €','15 €'],['El Jefe','Chorizo, ananas, queso oaxaca','7 €','10 €','15 €'],['El Pato','Canard confit, ananas, oignon, coriandre','8 €','12 €','17 €'],['El Pescado','Poisson du moment, guacamole, poivron grillé, chorizo','8 €','12 €','17 €'],['Gambas','Gambas, bisque, oignon rouge, mangue, coriandre','8 €','12 €','17 €'],['El Honguito','Chanterelles, guacamole, pico de gallo*','7 €','10 €','15 €']]},
+  {h:'Plats', note:'Servis avec frites de patates douces et salade.', items:[['Poulet tenders','16,50 €',''],['Carpaccio de bœuf','17,50 €','Accompagné de sauce chimichurri.'],['Fish and chips','17,50 €','']]},
+  {h:'Petites faims', items:[['Patacones','4,50 €','Galettes d’écrasé de bananes plantains frites.'],['Frites de patates douces','4,50 €',''],['Poulet tenders crispy','6 €','']]},
+  {h:'Menu enfant', note:'Jusqu’à 10 ans.', items:[['Menu enfant','10 €','2 tacos au choix, ou tenders de poulet, ou fish pané. Frites de pommes de terre ou de patates douces, un sirop au choix et une glace.']]},
+  {h:'Desserts', items:[['Tiramisu','7,50 €','Purée de fruits du moment.'],['Fondant arequipe','7,50 €','Fondant au chocolat, accompagné d’une boule de glace vanille et d’arequipe (spécialité d’Amérique du Sud à base de lait sucré).']]}
+];
+const FOOTNOTES = ['Salsa verde : sauce à base de tomate verte, oignon blanc, coriandre, citron vert, piment jalapeño.','Arrachera : viande coupée finement et marinée.','Pico de gallo : préparation à base de tomate, oignon et coriandre.','Totopos : tortillas de maïs grillées.'];
+
+/* ================= strings ================= */
+const T = {
+fr:{
+  ribbonB:'Démo', ribbon:'Prototype pour Takit’os. Aucune commande n’est envoyée.',
+  tagline:'Tortas au pain maison sans gluten, tacos et street food latino, cuisinés à <span class="nw">Dolus-d’Oléron</span>.',
+  statusOpen:'Ouvert ce soir', statusUntil:'jusqu’à 21\u00a0h\u00a030', statusSub:'Livraison sur toute l’île, ou à emporter.',
+  modeLabel:'Mode de commande', delivery:'Livraison', pickup:'À emporter', langSwitch:'English version', langOther:'EN',
+  lastOrder:'Votre dernière commande : {n}, {total}.', reorder:'Recommander',
+  sigTitle:'La torta', sigBody:'Notre pain maison sans gluten, fourré au fromage. Dès 12 € seule, dès 14 € en menu.', sigCta:'Voir les tortas',
+  categories:'Catégories de la carte', newTag:'Nouveau', newDivider:'Nouveautés à découvrir',
+  add:'Ajouter', mealFrom:'Menu {p}', gf:'Pain sans gluten', vege:'Végé', vegan:'Sans produit animal', spicy:'Relevé', moment:'Postre del momento', arrivage:'Selon arrivage', cold:'Servi frais', alc:'Alcool, 18 ans et plus',
+  kitIntro:'Le vrai taco mexicain se monte à table : petites tortillas de maïs chaudes, garnitures, salsas et crudités voyagent chacun dans leur boîte. Rien à voir avec le French tacos.',
+  kitCta:'Composer mon kit', kitFrom:'dès {p}', tacos:'{n} tacos',
+  basket:'Panier', viewBasket:'Voir le panier', yourOrder:'Votre commande',
+  emptyBasket:'Votre panier est vide. Commencez par une torta : pain maison sans gluten, fourré au fromage.',
+  withIt:'Pour accompagner', makeMeal:'Passer en menu (+{p})', less:'Retirer un', more:'Ajouter un',
+  cutlery:'Ajouter des couverts', cutleryHint:'Laissez décoché si vous n’en avez pas besoin.',
+  promo:'Code promo', apply:'Appliquer', promoOk:'BIENVENUE : −10 % sur votre première commande, hors bières.', promoBad:'Ce code n’existe pas. Essayez BIENVENUE.', promoUsed:'Ce code a déjà servi pour une commande précédente.', promoRemove:'Retirer le code',
+  subtotal:'Sous-total', discount:'Remise', fee:'Livraison', total:'Total', feeLater:'selon l’adresse',
+  checkout:'Commander', continue:'Continuer', back:'Retour', alcoholFood:'Les bières se commandent avec un plat.',
+  option:'Formule', only:'Torta seule', meal:'Menu : frites de patates douces et boisson', drink:'Boisson du menu', soda:'Soda (inclus)', juice:'Jus de fruits (+1 €)',
+  recipe:'Recette', main:'Plat', fries:'Frites', flavor:'Parfum', note:'Une précision ? (ex. sans oignon, sans coriandre)', addCta:'Ajouter',
+  story:'D’où ça vient', seePhoto:'Voir la photo', seePhotos:'Voir les photos', hidePhoto:'Masquer',
+  flavours:'Saveurs', lookUp:'Rechercher', newTab:'nouvel onglet', kitFilling:'Kit : {f}', stepsLabel:'Étapes de la commande', stepOf:'Étape {n} sur {m} : {s}', fzDateHint:'Au moins 48 h à l’avance, hors mardi et mercredi.', fzErrDate:'Choisissez une date.', fzErrSoon:'Une Fiesta se demande au moins 48 h à l’avance.', fzErrClosed:'Nous sommes fermés le mardi et le mercredi.',
+  infoTitle:'Allergènes, origine, fait maison', allergens:'Allergènes', allergenDemo:'Indicatif pour la démo, à valider avec les fiches recettes.', noneExpected:'Aucun des 14 allergènes majeurs attendu.',
+  origin:'Origine du {meat}', toFill:'à renseigner', homemade:'Fait maison', homemadeTodo:'À confirmer plat par plat.',
+  meat_poulet:'poulet', meat_porc:'porc', meat_boeuf:'bœuf', meat_canard:'canard',
+  minors:'La vente d’alcool est interdite aux mineurs de moins de 18 ans.', health:'L’abus d’alcool est dangereux pour la santé, à consommer avec modération.',
+  added:'Ajouté au panier', close:'Fermer',
+  kitTitle:'Le Kit Takit’os', kitStep1:'Combien de tacos ?', kitStep2:'Vos garnitures', kitStep3:'Accompagnement', kitSummary:'Votre kit {size}', fillingsTodo:'Garnitures à choisir (jusqu’à {n})', dessertsLine:'4 desserts du moment : {d}',
+  pickN1:'Choisissez 1 garniture.', pickN:'Choisissez jusqu’à {n} garnitures.', split:'Dans votre kit : {s}.', premium:'+3 € les 5 tacos', pickOne:'Choisissez au moins une garniture.',
+  dessertsIncl:'4 desserts du moment inclus : {d}.', howTo:'Mode d’emploi', how1:'Une tortilla chaude', how2:'Une cuillère de garniture', how3:'Salsa, oignon, coriandre et un trait de citron vert',
+  addKit:'Ajouter le kit', kitOf:'Kit {size}', fiestaT:'Fiesta, 8 personnes et plus', fiestaL:'15 € par personne, sur demande 48 h à l’avance. Garnitures de la mer et girolles possibles.', fiestaCta:'Faire une demande',
+  steps:['Panier','Où et quand','Vos informations','Envoi'],
+  whereTitle:'Où vous livrer ?', pickupTitle:'Retrait au restaurant', addr:'Adresse', addrPh:'Rue, village, camping ou résidence', addrHint:'Une adresse, un village (La Cotinière, Boyardville…) ou le nom de votre camping suffit.',
+  communeAsk:'Dans quelle commune ?', change:'Changer', zoneLine:'Livraison {fee}, minimum {min}, environ {eta} min.',
+  minMissing:'Minimum {min} pour {commune} : ajoutez {miss}.', mainland:'Nous livrons uniquement sur l’île d’Oléron. Vous pouvez commander à emporter, au 49 ter Grande Rue à Dolus.', toPickup:'Passer en à emporter',
+  details:'Précisions pour le livreur', detailsPh:'N° d’emplacement, code du portail, bâtiment, repère…', islandCap:'Schéma de l’île, depuis Dolus', restaurant:'Takit’os',
+  when:'Quand ?', asap:'Dès que possible, vers {t}', full:'complet', addrSugg:'Lieux proposés', pickupLine:'Prête en ~{eta} min au 49 ter Grande Rue, 17550 Dolus-d’Oléron.',
+  youTitle:'Vos informations', name:'Prénom', namePh:'Pour le sac', payD:'Paiement à la livraison', payP:'Paiement au retrait', card:'Carte', cash:'Espèces',
+  allergy:'Une allergie ?', allergyPh:'Ex. arachides, lait', allergyHint:'Facultatif. Nous la vérifions avant de cuisiner ; elle ne sert qu’à préparer cette commande.', age:'J’ai 18 ans ou plus. Une pièce d’identité pourra être demandée à la remise.',
+  noPhone:'Pas besoin de numéro : il arrive avec votre message.', legal:'En envoyant votre commande, vous acceptez les conditions de vente. Les repas étant périssables, le droit de rétractation ne s’applique pas.',
+  errAddr:'Indiquez une adresse sur l’île.', errCommune:'Choisissez votre commune.', errName:'Indiquez votre prénom.', errAge:'Confirmez votre âge pour commander de la bière.',
+  sendTitle:'Envoyez votre commande', codeLabel:'Votre code de commande', codeHint:'Il nomme votre commande au comptoir et à la porte.',
+  howItWorks:'Votre commande part par message vers le restaurant. Nous la lançons dès que nous l’avons confirmée, en général sous 5 minutes. Rien à payer en ligne.',
+  seeMsg:'Voir le message envoyé', viaWa:'Envoyer par WhatsApp', viaSms:'Envoyer par SMS', viaCall:'Appeler le restaurant',
+  callHint:'Appelez le {tel} et donnez votre code, puis lisez votre récapitulatif.', demoSend:'Démo : {app} s’ouvrirait avec ce message, adressé au 07 70 02 12 95.',
+  waitTitle:'Message envoyé', waitSubWa:'Votre commande est lancée dès que nous la confirmons. Nous vous répondons sur WhatsApp, en général sous 5 minutes.', waitSubSms:'Votre commande est lancée dès que nous la confirmons. Nous vous répondons par SMS, en général sous 5 minutes.', demoReply:'Démo : la réponse du restaurant est simulée.',
+  nextD:'Nous vous écrivons quand le livreur part. À la porte, donnez votre code : {code}.', nextP:'Au comptoir, donnez votre code : {code}.',
+  backMenu:'Retour à la carte', recapTitle:'Récapitulatif',
+  fiestaTitle:'Fiesta sur demande', guests:'Nombre de personnes', date:'Date', time:'Heure', wishes:'Garnitures souhaitées', preorderNote:'Sur précommande', fiestaNote:'Une précision ?', fiestaEst:'Estimation : {p} pour {n} personnes.', fiestaSend:'Envoyer la demande', fiestaSent:'Demande envoyée', fiestaReply:'Merci ! Nous vous rappelons pour finaliser le menu et l’heure.',
+  carteLink:'La carte du restaurant', carteSub:'Tacos, tortas et desserts servis en salle', legalLinks:'Informations légales', mentions:'Mentions légales', cgv:'Conditions de vente', privacy:'Confidentialité', allergenTable:'Allergènes et origines',
+  phones:'Téléphone :', hoursBody:'Lundi, jeudi, vendredi, samedi et dimanche, de 12\u00a0h à 14\u00a0h et de 19\u00a0h à 21\u00a0h\u00a030. Fermé le mardi et le mercredi.', hoursWhen:'Horaires de janvier 2026, à confirmer.',
+  footDemo:'Prototype de démonstration préparé pour Takit’os. Aucune commande ni donnée n’est transmise. Allergènes, zones, frais, créneaux et nouveautés sont des propositions à valider. Les photos d’illustration seront remplacées avant la mise en ligne.',
+  legalSoon:'Démo : page à rédiger avant la mise en ligne.', dish:'Plat', originCol:'Origine', allergenNote:'Tableau indicatif pour la démo, à valider par la cuisine.',
+  carteTitle:'La carte du restaurant', carteHead:'Servie en salle, au 49 ter Grande Rue à Dolus. Prix sur place.', carteBack:'Commander en ligne', footnotes:'Lexique de la carte', hoursTitle:'Horaires',
+  item1:'article', itemN:'articles', toastLang:'Version française'
+},
+en:{
+  ribbonB:'Demo', ribbon:'Prototype for Takit’os. No order is sent.',
+  tagline:'Tortas on our homemade gluten-free bun, tacos and Latin street food, cooked in <span class="nw">Dolus-d’Oléron</span>.',
+  statusOpen:'Open tonight', statusUntil:'until 9:30 pm', statusSub:'Delivery across the island, or pickup.',
+  modeLabel:'How to order', delivery:'Delivery', pickup:'Pickup', langSwitch:'Version française', langOther:'FR',
+  lastOrder:'Your last order: {n}, {total}.', reorder:'Order again',
+  sigTitle:'The torta', sigBody:'Our homemade gluten-free bun, stuffed with cheese. From €12 on its own, from €14 as a meal.', sigCta:'See the tortas',
+  categories:'Menu sections', newTag:'New', newDivider:'New to discover',
+  add:'Add', mealFrom:'Meal {p}', gf:'Gluten-free bun', vege:'Veggie', vegan:'No animal products', spicy:'Spicy', moment:'Postre del momento', arrivage:'While stocks last', cold:'Served chilled', alc:'Alcohol, 18+',
+  kitIntro:'A real Mexican taco is built at the table: small warm corn tortillas, fillings, salsas and toppings each travel in their own box. Nothing to do with French tacos.',
+  kitCta:'Build my kit', kitFrom:'from {p}', tacos:'{n} tacos',
+  basket:'Basket', viewBasket:'View basket', yourOrder:'Your order',
+  emptyBasket:'Your basket is empty. Start with a torta: homemade gluten-free bun, stuffed with cheese.',
+  withIt:'On the side', makeMeal:'Make it a meal (+{p})', less:'Remove one', more:'Add one',
+  cutlery:'Add cutlery', cutleryHint:'Leave unticked if you don’t need any.',
+  promo:'Promo code', apply:'Apply', promoOk:'BIENVENUE: 10% off your first order, beers excluded.', promoBad:'Unknown code. Try BIENVENUE.', promoUsed:'This code was already used for a previous order.', promoRemove:'Remove code',
+  subtotal:'Subtotal', discount:'Discount', fee:'Delivery', total:'Total', feeLater:'depends on address',
+  checkout:'Checkout', continue:'Continue', back:'Back', alcoholFood:'Beers are sold with food.',
+  option:'Option', only:'Torta only', meal:'Meal: sweet potato fries and a drink', drink:'Meal drink', soda:'Soda (included)', juice:'Fruit juice (+€1)',
+  recipe:'Style', main:'Main', fries:'Fries', flavor:'Flavour', note:'Anything to change? (e.g. no onion, no coriander)', addCta:'Add',
+  story:'Where it comes from', seePhoto:'See the photo', seePhotos:'See the photos', hidePhoto:'Hide',
+  flavours:'Flavours', lookUp:'Look it up', newTab:'new tab', kitFilling:'Kit: {f}', stepsLabel:'Order steps', stepOf:'Step {n} of {m}: {s}', fzDateHint:'At least 48 h ahead, not on Tuesday or Wednesday.', fzErrDate:'Choose a date.', fzErrSoon:'A Fiesta needs at least 48 h notice.', fzErrClosed:'We are closed on Tuesday and Wednesday.',
+  infoTitle:'Allergens, origin, homemade', allergens:'Allergens', allergenDemo:'Indicative for the demo, to be checked against the recipe sheets.', noneExpected:'None of the 14 major allergens expected.',
+  origin:'Origin of the {meat}', toFill:'to be filled in', homemade:'Homemade', homemadeTodo:'To be confirmed dish by dish.',
+  meat_poulet:'chicken', meat_porc:'pork', meat_boeuf:'beef', meat_canard:'duck',
+  minors:'La vente d’alcool est interdite aux mineurs de moins de 18 ans.', health:'L’abus d’alcool est dangereux pour la santé, à consommer avec modération.',
+  added:'Added to basket', close:'Close',
+  kitTitle:'The Takit’os Kit', kitStep1:'How many tacos?', kitStep2:'Your fillings', kitStep3:'Side', kitSummary:'Your {size} kit', fillingsTodo:'Fillings to choose (up to {n})', dessertsLine:'4 desserts of the moment: {d}',
+  pickN1:'Pick 1 filling.', pickN:'Pick up to {n} fillings.', split:'In your kit: {s}.', premium:'+€3 per 5 tacos', pickOne:'Pick at least one filling.',
+  dessertsIncl:'4 desserts of the moment included: {d}.', howTo:'How to build', how1:'A warm tortilla', how2:'A spoonful of filling', how3:'Salsa, onion, coriander and a squeeze of lime',
+  addKit:'Add the kit', kitOf:'{size} kit', fiestaT:'Fiesta, 8 people or more', fiestaL:'€15 per person, on request 48 h ahead. Seafood and chanterelle fillings possible.', fiestaCta:'Send a request',
+  steps:['Basket','Where and when','Your details','Send'],
+  whereTitle:'Where should we deliver?', pickupTitle:'Pickup at the restaurant', addr:'Address', addrPh:'Street, village, campsite or residence', addrHint:'An address, a village (La Cotinière, Boyardville…) or your campsite’s name is enough.',
+  communeAsk:'Which town?', change:'Change', zoneLine:'Delivery {fee}, minimum {min}, about {eta} min.',
+  minMissing:'Minimum order for {commune} is {min}: add {miss}.', mainland:'We only deliver on the île d’Oléron. You can order for pickup at 49 ter Grande Rue, Dolus.', toPickup:'Switch to pickup',
+  details:'Notes for the driver', detailsPh:'Pitch number, gate code, building, landmark…', islandCap:'Sketch of the island, from Dolus', restaurant:'Takit’os',
+  when:'When?', asap:'As soon as possible, around {t}', full:'full', addrSugg:'Suggested places', pickupLine:'Ready in ~{eta} min at 49 ter Grande Rue, 17550 Dolus-d’Oléron.',
+  youTitle:'Your details', name:'First name', namePh:'For the bag', payD:'Pay on delivery', payP:'Pay at pickup', card:'Card', cash:'Cash',
+  allergy:'Any allergy?', allergyPh:'E.g. peanuts, milk', allergyHint:'Optional. We check it before cooking; it is only used to prepare this order.', age:'I am 18 or over. ID may be checked on handover.',
+  noPhone:'No phone number needed: it comes with your message.', legal:'By sending your order you accept the terms of sale. Meals are perishable, so the withdrawal right does not apply.',
+  errAddr:'Enter an address on the island.', errCommune:'Choose your town.', errName:'Enter your first name.', errAge:'Confirm your age to order beer.',
+  sendTitle:'Send your order', codeLabel:'Your order code', codeHint:'It names your order at the counter and at the door.',
+  howItWorks:'Your order goes to the restaurant as a message. We start cooking once we’ve confirmed it, usually within 5 minutes. Nothing to pay online.',
+  seeMsg:'See the message', viaWa:'Send via WhatsApp', viaSms:'Send by text', viaCall:'Call the restaurant',
+  callHint:'Call {tel} and give your code, then read out your summary.', demoSend:'Demo: {app} would open with this message, addressed to 07 70 02 12 95.',
+  waitTitle:'Message sent', waitSubWa:'We start cooking as soon as we confirm your order. We reply on WhatsApp, usually within 5 minutes.', waitSubSms:'We start cooking as soon as we confirm your order. We reply by text, usually within 5 minutes.', demoReply:'Demo: the restaurant’s reply is simulated.',
+  nextD:'We’ll message you when the driver leaves. At the door, give your code: {code}.', nextP:'At the counter, give your code: {code}.',
+  backMenu:'Back to the menu', recapTitle:'Summary',
+  fiestaTitle:'Fiesta on request', guests:'Number of people', date:'Date', time:'Time', wishes:'Fillings you’d like', preorderNote:'Pre-order', fiestaNote:'Anything else?', fiestaEst:'Estimate: {p} for {n} people.', fiestaSend:'Send the request', fiestaSent:'Request sent', fiestaReply:'Thank you! We’ll call you back to settle the menu and the time.',
+  carteLink:'The restaurant menu', carteSub:'Tacos, tortas and desserts served in the dining room', legalLinks:'Legal information', mentions:'Legal notice', cgv:'Terms of sale', privacy:'Privacy', allergenTable:'Allergens and origins',
+  phones:'Phone:', hoursBody:'Monday, Thursday, Friday, Saturday and Sunday, 12–2 pm and 7–9:30 pm. Closed on Tuesday and Wednesday.', hoursWhen:'January 2026 hours, to be confirmed.',
+  footDemo:'Demo prototype prepared for Takit’os. No order or data is sent. Allergens, zones, fees, slots and new items are proposals to be validated. Illustration photos will be replaced before launch.',
+  legalSoon:'Demo: this page will be written before launch.', dish:'Dish', originCol:'Origin', allergenNote:'Indicative table for the demo, to be validated by the kitchen.',
+  carteTitle:'The restaurant menu', carteHead:'Served in the dining room at 49 ter Grande Rue, Dolus. Dine-in prices; the card is in French.', carteBack:'Order online', footnotes:'Menu glossary', hoursTitle:'Opening hours',
+  item1:'item', itemN:'items', toastLang:'English version'
+}};
+
+/* ================= helpers ================= */
+const $ = (s, r) => (r || document).querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let S = null, SH = null;
+const frT = v => typeof v === 'string' ? v.replace(/ ([:;!?»])/g, '\u00a0$1').replace(/« /g, '«\u00a0') : Array.isArray(v) ? v.map(frT) : v;
+function t(k, p){ let s = T[S.lang][k] != null ? T[S.lang][k] : (T.fr[k] != null ? T.fr[k] : k); if(p && typeof s === 'string'){ for(const x in p) s = s.split('{' + x + '}').join(p[x]); } return S.lang === 'fr' ? frT(s) : s; }
+function L(o){ const v = (o && typeof o === 'object' && !Array.isArray(o)) ? (o[S.lang] || o.fr) : o; return S.lang === 'fr' ? frT(v) : v; }
+const fmt = {};
+function money(n, lang){ const lg = lang || (S ? S.lang : 'fr'); const loc = lg === 'en' ? 'en-GB' : 'fr-FR'; if(!fmt[loc]) fmt[loc] = new Intl.NumberFormat(loc, {style:'currency', currency:'EUR'}); return fmt[loc].format(n).replace(/ /g, ' '); }
+const moneyFr = n => money(n, 'fr');
+function hm(m){ m = ((Math.round(m) % 1440) + 1440) % 1440; return String(Math.floor(m / 60)).padStart(2, '0') + ':' + String(m % 60).padStart(2, '0'); }
+function nowMin(){ return Math.min(21 * 60 + 25, 19 * 60 + 5 + Math.max(0, Math.floor((Date.now() - S.clock0) / 60000))); }
+const item = id => ITEMS.find(i => i.id === id);
+const commune = id => COMMUNES.find(c => c.id === id) || null;
+const reduceMotion = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const norm = s => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[’'`\-,.;:/()]/g, ' ').replace(/\s+/g, ' ').trim();
+function plural(n){ return n + ' ' + (n > 1 ? t('itemN') : t('item1')); }
+const cap = x => x.charAt(0).toUpperCase() + x.slice(1);
+const colon = () => S.lang === 'en' ? ': ' : '\u00a0: ';
+
+/* ================= options and prices ================= */
+function groupsFor(it, opts){
+  const g = [];
+  if(it.cat === 'tortas'){
+    g.push({key:'formule', label:'option', def:'seule', choices:[{v:'seule', label:{fr:T.fr.only,en:T.en.only}, delta:0}, {v:'menu', label:{fr:T.fr.meal,en:T.en.meal}, delta:it.meal}]});
+    if(opts && opts.formule === 'menu') g.push({key:'drink', label:'drink', def:'s:Coca-Cola', choices:[...SODAS.map(s => ({v:'s:' + s, label:s, delta:0, grp:'soda'})), ...JUICES.map(j => ({v:'j:' + j.fr, label:{fr:'Jus ' + j.fr.toLowerCase(), en:j.en + ' juice'}, delta:1, grp:'juice'}))]});
+  } else if(it.id === 'pl-tenders'){
+    g.push({key:'style', label:'recipe', def:'classique', choices:[{v:'classique', label:{fr:'Classiques',en:'Classic'}, delta:0}, {v:'caramel', label:{fr:'Caramélisés',en:'Caramelised'}, delta:0}]});
+  } else if(it.id === 'k-menu'){
+    g.push({key:'main', label:'main', def:'tenders', choices:[{v:'tenders', label:{fr:'Tenders de poulet',en:'Chicken tenders'}, delta:0}, {v:'fish', label:{fr:'Fish pané',en:'Breaded fish'}, delta:0}]});
+    g.push({key:'fries', label:'fries', def:'patate', choices:[{v:'pdt', label:{fr:'Pommes de terre',en:'Potato'}, delta:0}, {v:'patate', label:{fr:'Patates douces',en:'Sweet potato'}, delta:0}]});
+  } else if(it.id === 'd-soda'){
+    g.push({key:'flavor', label:'flavor', def:'Coca-Cola', choices:SODAS.map(s => ({v:s, label:s, delta:0}))});
+  } else if(it.id === 'd-jus'){
+    g.push({key:'flavor', label:'flavor', def:'Orange', choices:JUICES.map(j => ({v:j.fr, label:j, delta:0}))});
+  } else if(it.id === 'l-jarritos'){
+    g.push({key:'flavor', label:'flavor', def:'Mandarine', choices:[{v:'Mandarine', label:{fr:'Mandarine',en:'Mandarin'}, delta:0}, {v:'Goyave', label:{fr:'Goyave',en:'Guava'}, delta:0}, {v:'Pamplemousse', label:{fr:'Pamplemousse',en:'Grapefruit'}, delta:0}]});
+  }
+  return g;
+}
+function defaultOpts(it){ const o = {}; groupsFor(it, {}).forEach(g => { o[g.key] = g.def; }); return o; }
+function itemUnit(it, opts){ let p = it.price; groupsFor(it, opts).forEach(g => { const c = g.choices.find(c => c.v === opts[g.key]); if(c && c.delta) p += c.delta; }); return Math.round(p * 100) / 100; }
+function kitUnit(k){ const sz = KIT_SIZES.find(s => s.id === k.size); const sp = kitSplit(k); return Math.round((sz.price + k.fillings.reduce((s, f, i) => s + (FILLINGS.find(x => x.id === f).premium || 0) * sp[i], 0)) * 100) / 100; }
+function lineUnit(l){ return l.kit ? kitUnit(l.kit) : itemUnit(item(l.id), l.opts); }
+function kitSplit(k){ const sz = KIT_SIZES.find(s => s.id === k.size); const n = k.fillings.length || 1; const base = Math.floor(sz.tacos / n); const out = []; let rest = sz.tacos - base * n; for(let i = 0; i < n; i++){ out.push(base + (rest > 0 ? 1 : 0)); rest--; } return out; }
+function lineName(l, lang){ const lg = lang || S.lang; if(l.kit){ const sz = KIT_SIZES.find(s => s.id === l.kit.size); return T[lg].kitOf.replace('{size}', sz.label); } const it = item(l.id); const nm = it.name[lg] || it.name.fr; return it.cat === 'tortas' ? 'Torta ' + nm : nm; }
+function lineSummary(l, lang){
+  const lg = lang || S.lang;
+  if(l.kit){ const sp = kitSplit(l.kit); const parts = l.kit.fillings.map((f, i) => FILLINGS.find(x => x.id === f).name + ' ×' + sp[i]); if(l.kit.size === 'familia'){ const sd = KIT_SIDES.find(s => s.id === l.kit.side); parts.push(sd[lg] || sd.fr); parts.push((lg === 'en' ? '4 desserts: ' : '4 desserts : ') + (item(DESSERT_OF_DAY).name[lg])); } return parts.join(', '); }
+  const it = item(l.id); const parts = [];
+  groupsFor(it, l.opts).forEach(g => { const c = g.choices.find(c => c.v === l.opts[g.key]); if(!c) return; if(g.key === 'formule') parts.push(c.v === 'menu' ? (lg === 'en' ? 'Meal' : 'Menu') : (lg === 'en' ? 'Torta only' : 'Torta seule')); else parts.push(typeof c.label === 'string' ? c.label : (c.label[lg] || c.label.fr)); });
+  return parts.join(', ');
+}
+function lineAllergens(l){
+  if(l.kit){ const a = new Set(); l.kit.fillings.forEach(f => FILLINGS.find(x => x.id === f).allergens.forEach(x => a.add(x))); if(l.kit.size === 'familia') item(DESSERT_OF_DAY).allergens.forEach(x => a.add(x)); return [...a]; }
+  const it = item(l.id); const a = new Set(it.allergens); if(it.id === 'k-menu' && l.opts && l.opts.main === 'fish') a.add('poisson'); return [...a];
+}
+const isFood = l => l.kit || item(l.id).cat !== 'boissons' && item(l.id).cat !== 'latinos';
+const hasAlcohol = lines => lines.some(l => !l.kit && item(l.id).alcohol);
+
+/* ================= state ================= */
+function fresh(){ return {v:1, clock0:Date.now(), lang:'fr', mode:'delivery', basket:[], promo:'', promoMsg:'', cutlery:false,
+  form:{addr:'', commune:'', details:'', slot:'asap', name:'Camille', pay:'card', allergy:'', age:false}, last:null}; }
+function load(){ try{ const raw = localStorage.getItem(KEY); if(!raw) return null; const s = JSON.parse(raw); if(!(s && s.v === 1 && Array.isArray(s.basket))) return null; if(!(Date.now() - s.clock0 < 6 * 3600 * 1000)) s.clock0 = Date.now(); return s; }catch(e){ return null; } }
+let saveTimer = null;
+function save(){ clearTimeout(saveTimer); saveTimer = setTimeout(() => { try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }, 120); }
+
+/* ================= basket maths ================= */
+function totals(){
+  const sub = Math.round(S.basket.reduce((s, l) => s + lineUnit(l) * l.qty, 0) * 100) / 100;
+  const base = S.basket.filter(l => l.kit || !item(l.id).alcohol).reduce((s, l) => s + lineUnit(l) * l.qty, 0);
+  const disc = S.promo === 'BIENVENUE' ? Math.round(base * 10) / 100 : 0;
+  const c = commune(S.form.commune);
+  const fee = (S.mode === 'delivery' && c) ? c.fee : 0;
+  return {sub, disc, fee, total:Math.round((sub - disc + fee) * 100) / 100, count:S.basket.reduce((s, l) => s + l.qty, 0), known:S.mode !== 'delivery' || !!c};
+}
+function basketBlock(){
+  if(!S.basket.length) return t('emptyBasket');
+  if(hasAlcohol(S.basket) && !S.basket.some(isFood)) return t('alcoholFood');
+  return '';
+}
+function minBlock(){
+  if(S.mode !== 'delivery') return '';
+  const c = commune(S.form.commune); if(!c) return '';
+  const tt = totals(); return tt.sub < c.min ? t('minMissing', {min:money(c.min), commune:c.name, miss:money(c.min - tt.sub)}) : '';
+}
+function addLine(line){
+  const key = JSON.stringify([line.id, line.opts || null, line.kit || null, line.note || '']);
+  const ex = S.basket.find(l => JSON.stringify([l.id, l.opts || null, l.kit || null, l.note || '']) === key);
+  if(ex) ex.qty += line.qty; else S.basket.push(line);
+}
+function prepMin(){ return 20; }
+function etaFor(mode, c){ return Math.ceil((prepMin() + (mode === 'delivery' ? (c ? c.travel : 15) : 0)) / 5) * 5; }
+function asapAt(){ return Math.ceil((nowMin() + etaFor(S.mode, commune(S.form.commune))) / 5) * 5; }
+/* quarter-hour slots after the ASAP time, up to closing; two of them are shown full to demo the capacity cap */
+function slotList(){
+  const out = [];
+  for(let m = Math.ceil((asapAt() + 10) / 15) * 15, i = 0; m <= 21 * 60 + 30 && out.length < 6; m += 15, i++) out.push({m, full:(i === 1 || i === 2)});
+  return out;
+}
+
+/* ================= address detection ================= */
+/* every island key (commune names, postcodes, villages, beaches) with the commune it points to;
+   a place written with its article also matches without it ("port du Douhet") */
+const ARTICLE = /^(le|la|les|l) /;
+const KEYS = [];
+COMMUNES.forEach(c => { c.keys.forEach(k => KEYS.push({k, c:c.id})); c.cp.forEach(k => KEYS.push({k, c:c.id})); });
+PLACES.forEach(p => { const k = norm(p.n); KEYS.push({k, c:p.c, place:p.n}); const bare = k.replace(ARTICLE, ''); if(bare !== k && bare.length >= 5) KEYS.push({k:bare, c:p.c, place:p.n}); });
+function detect(text){
+  const n = ' ' + norm(text) + ' ';
+  if(n.trim().length < 2) return {commune:null, mainland:false};
+  /* the commune usually ends an address: keep the match that ends last, then the longest */
+  let best = null;
+  KEYS.forEach(e => { const i = n.lastIndexOf(' ' + e.k + ' '); if(i < 0) return; const end = i + e.k.length; if(!best || end > best.end || (end === best.end && e.k.length > best.k.length)) best = {end, k:e.k, c:e.c}; });
+  if(best) return {commune:best.c, mainland:false, atEnd:best.end >= n.length - 2};
+  if(MAINLAND.some(k => n.includes(' ' + k + ' '))) return {commune:null, mainland:true};
+  return {commune:null, mainland:false};
+}
+function suggestions(text){
+  const n = norm(text); if(n.length < 2) return [];
+  const words = n.split(' '); const last = words[words.length - 1];
+  if(last.length < 2 || /^\d+$/.test(last) || SUGG_STOP.includes(last)) return [];
+  const d = detect(text); if(d.commune && d.atEnd) return [];
+  const out = [];
+  PLACES.forEach(p => { const pn = norm(p.n); if(!n.includes(pn) && pn.split(' ').some(w => w.length > 3 && w.startsWith(last))) out.push({label:p.n, c:p.c}); });
+  COMMUNES.forEach(c => { const cn = norm(c.name); if(last.length >= 3 && !c.keys.some(k => (' ' + n + ' ').includes(' ' + k + ' ')) && cn.split(' ').some(w => w.startsWith(last))) out.push({label:c.name, c:c.id}); });
+  return out.slice(0, 5);
+}
+const SUGG_STOP = ['oleron','bains','plage','ile','rue','route','avenue','chemin','allee','impasse','place','camping','residence','village','port'];
+/* picking a suggestion replaces the half-typed words it completes */
+function completeWith(addr, label){
+  const lw = norm(label).split(' ');
+  const words = addr.trim().split(/\s+/).filter(Boolean);
+  while(words.length){ const w = norm(words[words.length - 1]); if(w && lw.some(x => x.startsWith(w))) words.pop(); else break; }
+  const head = words.join(' ').replace(/[,\s]+$/, '');
+  return (head ? head + ', ' : '') + label;
+}
+
+/* ================= illustrations ================= */
+const SK = 'stroke="var(--art-ink)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"';
+const SK2 = 'stroke="var(--art-ink)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"';
+const SHADOW = '<ellipse cx="48" cy="87" rx="32" ry="4.5" fill="var(--art-shadow)"/>';
+const svgArt = (inner, vb) => '<svg class="art" viewBox="' + (vb || '0 0 96 96') + '" aria-hidden="true" focusable="false">' + inner + '</svg>';
+const TENDER_PATHS = ['M12 62c-1-8 9-12 21-11 11 1 17 6 16 12-1 7-12 9-22 8-9-1-14-4-15-9z','M44 56c1-9 12-12 23-9 10 3 15 9 13 15-2 6-13 7-22 5-9-2-14-6-14-11z','M26 38c2-8 12-11 23-8 9 3 13 8 11 14-2 6-12 7-21 4-8-2-14-5-13-10z'];
+const ART = {
+  torta(v){
+    const fill = {poulet:'var(--f-crumb)', pork:'var(--f-pork)', fish:'var(--f-fishfry)', beef:'var(--f-beef)', veg:'var(--f-veg)'}[v] || 'var(--f-crumb)';
+    let extra = '';
+    if(v === 'pork') extra = '<path d="M20 63h8M34 66h10M50 63h9M64 65h8" fill="none" stroke="var(--f-pork-hi)" stroke-width="2.4" stroke-linecap="round"/>';
+    if(v === 'beef') extra = '<path d="M16 60h64l-5 8-5-5-6 7-6-6-6 7-6-6-6 6-5-5-6 5z" fill="var(--f-cheese)" ' + SK2 + '/>';
+    if(v === 'fish' || v === 'veg') extra = '<g fill="var(--f-leaf)"><circle cx="28" cy="64" r="1.8"/><circle cx="48" cy="66" r="1.8"/><circle cx="66" cy="64" r="1.8"/></g>';
+    return svgArt(SHADOW +
+      '<path d="M12 70c0-4 16-7 36-7s36 3 36 7v2c0 6-16 9-36 9s-36-3-36-9z" fill="var(--f-bun)" ' + SK + '/>' +
+      '<path d="M11 64c6-6 20-9 37-9s31 3 37 9c-3 5-18 8-37 8s-34-3-37-8z" fill="' + fill + '" ' + SK2 + '/>' + extra +
+      '<path d="M13 60l5-5 4 5 5-6 4 6 5-5 4 5 5-6 4 6 5-5 4 5 5-6 4 6 5-5 4 5" fill="none" stroke="var(--f-leaf)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<path d="M9 56c-1-15 15-27 39-27s40 12 39 27c0 3-3 5-7 5H16c-4 0-7-2-7-5z" fill="var(--f-bun)" ' + SK + '/>' +
+      '<g fill="var(--f-crust)" opacity=".9"><ellipse cx="29" cy="43" rx="6.5" ry="3.4"/><ellipse cx="53" cy="37.5" rx="7.5" ry="3.4"/><ellipse cx="70" cy="47" rx="5.5" ry="3"/><ellipse cx="44" cy="51" rx="4.5" ry="2.6"/><ellipse cx="20" cy="53" rx="3" ry="2"/></g>' +
+      '<path d="M33 49q3-2 6 0M60 54q3-2 6 0M40 41q2-1.5 5 0" fill="none" stroke="var(--f-crust)" stroke-width="1.6" stroke-linecap="round"/>');
+  },
+  ceviche(){ return svgArt(SHADOW + '<path d="M16 38l8-19 11 16z" fill="var(--f-tortilla)" ' + SK2 + '/><path d="M62 34l14-15 4 19z" fill="var(--f-tortilla)" ' + SK2 + '/><path d="M11 44h74c0 20-17 37-37 37S11 64 11 44z" fill="var(--f-bowl)" ' + SK + '/><ellipse cx="48" cy="44" rx="37" ry="9" fill="var(--f-ceviche)" ' + SK + '/><rect x="26" y="36" width="10" height="9" rx="2" fill="var(--f-fish)" ' + SK2 + '/><rect x="40" y="34" width="9" height="9" rx="2" fill="var(--f-mango)" ' + SK2 + '/><rect x="53" y="37" width="10" height="9" rx="2" fill="var(--f-fish)" ' + SK2 + '/><rect x="34" y="42" width="8" height="7" rx="2" fill="var(--f-leaf)" ' + SK2 + '/><path d="M46 47q4-4 8 0M58 44q3-3 6 0" fill="none" stroke="var(--f-onion)" stroke-width="2.6" stroke-linecap="round"/><path d="M70 41a12 12 0 0 1 15-8l-4 13z" fill="var(--f-lime)" ' + SK2 + '/>'); },
+  shrimp(){ return svgArt(SHADOW + '<path d="M48 56v21" fill="none" ' + SK + '/><path d="M34 81h28" fill="none" stroke="var(--art-ink)" stroke-width="4" stroke-linecap="round"/><path d="M18 26h60c0 18-13 31-30 31S18 44 18 26z" fill="var(--f-glass)" ' + SK + '/><path d="M23 31h50c-2 13-12 21-25 21S25 44 23 31z" fill="var(--f-sauce)"/><rect x="31" y="33" width="8" height="7" rx="2" fill="var(--f-leaf)" ' + SK2 + '/><rect x="50" y="36" width="8" height="7" rx="2" fill="var(--f-leaf)" ' + SK2 + '/><path d="M18 26h60c0 18-13 31-30 31S18 44 18 26z" fill="none" ' + SK + '/><path d="M63 25c1-12 17-13 18-2 1 8-6 11-11 8" fill="none" stroke="var(--art-ink)" stroke-width="9" stroke-linecap="round"/><path d="M63 25c1-12 17-13 18-2 1 8-6 11-11 8" fill="none" stroke="var(--f-shrimp)" stroke-width="4.5" stroke-linecap="round"/><path d="M13 23a9 9 0 0 1 15 3l-10 5z" fill="var(--f-lime)" ' + SK2 + '/>'); },
+  patacones(){ const d = (cx, cy, rx, ry) => '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '" fill="var(--f-plantain)" ' + SK + '/><path d="M' + (cx - rx + 6) + ' ' + (cy - 3) + 'q' + (rx - 6) + ' -7 ' + (2 * rx - 12) + ' 0M' + (cx - rx + 9) + ' ' + (cy + 5) + 'q' + (rx - 9) + ' -6 ' + (2 * rx - 18) + ' 0" fill="none" stroke="var(--f-plantain-dk)" stroke-width="2.4" stroke-linecap="round"/>'; return svgArt(SHADOW + d(31, 63, 20, 15) + d(64, 59, 20, 15) + d(47, 39, 19, 14)); },
+  fries(){ const st = (x, r) => '<rect x="' + x + '" y="13" width="8" height="38" rx="2.5" fill="var(--f-fry)" ' + SK2 + ' transform="rotate(' + r + ' ' + (x + 4) + ' 42)"/>'; return svgArt(SHADOW + st(28, -14) + st(46, 3) + st(37, -5) + st(55, 11) + st(41, -9) + st(51, 15) + '<path d="M23 43h50l-7 40H30z" fill="var(--f-kraft)" ' + SK + '/><path d="M27 55h42" stroke="var(--art-ink)" stroke-opacity=".22" stroke-width="3"/>'); },
+  tenders(){ return svgArt(SHADOW + TENDER_PATHS.map(d => '<path d="' + d + '" fill="var(--f-crumb)" ' + SK + '/>').join('') + '<g fill="var(--f-bun)"><circle cx="22" cy="60" r="1.5"/><circle cx="34" cy="63" r="1.5"/><circle cx="56" cy="55" r="1.5"/><circle cx="68" cy="60" r="1.5"/><circle cx="38" cy="38" r="1.5"/><circle cx="48" cy="42" r="1.5"/></g>'); },
+  plate(){ const fry = (x, y, r) => '<rect x="' + x + '" y="' + y + '" width="26" height="6.5" rx="2.5" fill="var(--f-fry)" ' + SK2 + ' transform="rotate(' + r + ' ' + (x + 13) + ' ' + (y + 3) + ')"/>'; return svgArt(SHADOW + '<ellipse cx="48" cy="58" rx="42" ry="27" fill="var(--f-plate)" ' + SK + '/>' + fry(52, 58, -14) + fry(54, 66, -4) + fry(50, 50, -22) + '<path d="M62 41c4-8 15-8 17 0-5 5-12 6-17 0z" fill="var(--f-leaf)" ' + SK2 + '/><g transform="translate(9 26) scale(.6)">' + TENDER_PATHS.map(d => '<path d="' + d + '" fill="var(--f-crumb)" stroke="var(--art-ink)" stroke-width="4.5" stroke-linejoin="round"/>').join('') + '</g>'); },
+  fish(){ const fry = (x, y, r) => '<rect x="' + x + '" y="' + y + '" width="30" height="7" rx="2.5" fill="var(--f-fry)" ' + SK2 + ' transform="rotate(' + r + ' ' + (x + 15) + ' ' + (y + 3) + ')"/>'; return svgArt(SHADOW + fry(16, 66, -6) + fry(30, 72, 4) + fry(44, 64, -10) + '<path d="M10 46c7-12 23-18 39-16 9 1 15 4 19 8l11-9-2 13 5 11-13-5c-5 5-12 8-21 8-17 1-31-3-38-10z" fill="var(--f-fishfry)" ' + SK + '/><g fill="var(--f-bun)"><circle cx="22" cy="45" r="1.5"/><circle cx="34" cy="40" r="1.5"/><circle cx="46" cy="47" r="1.5"/><circle cx="58" cy="42" r="1.5"/></g><path d="M70 63a10 10 0 0 1 16 6l-11 3z" fill="var(--f-lime)" ' + SK2 + '/>'); },
+  kids(){ return svgArt(SHADOW + '<path d="M28 39v-7a12 12 0 0 1 24 0v7" fill="none" ' + SK + '/><rect x="12" y="39" width="54" height="42" rx="7" fill="var(--f-box)" ' + SK + '/><path d="M39 50l3.5 7 7.7 1.1-5.6 5.4 1.3 7.7L39 67.6l-6.9 3.6 1.3-7.7-5.6-5.4 7.7-1.1z" fill="var(--f-cheese)" ' + SK2 + '/><path d="M69 53l8 30 8-30z" fill="var(--f-kraft)" ' + SK2 + '/><circle cx="77" cy="46" r="10" fill="var(--f-guayaba)" ' + SK + '/>'); },
+  can(){ return svgArt(SHADOW + '<rect x="29" y="14" width="38" height="70" rx="9" fill="var(--f-can)" ' + SK + '/><rect x="30.5" y="38" width="35" height="24" fill="var(--f-canband)"/><path d="M29 27h38M29 72h38" stroke="var(--art-ink)" stroke-width="2.4"/><path d="M42 19h12" stroke="var(--art-ink)" stroke-width="3" stroke-linecap="round"/><path d="M37 30v36" stroke="var(--tile-dot)" stroke-width="4" stroke-linecap="round"/><rect x="29" y="14" width="38" height="70" rx="9" fill="none" ' + SK + '/>'); },
+  juice(){ return svgArt(SHADOW + '<path d="M59 6l-9 44" stroke="var(--art-ink)" stroke-width="7" stroke-linecap="round"/><path d="M59 6l-9 44" stroke="var(--rojo)" stroke-width="3.5" stroke-linecap="round"/><path d="M26 22h44l-6 61H32z" fill="var(--f-glass)" ' + SK + '/><path d="M29.4 36h37.2l-4.5 45H33.9z" fill="var(--f-juice)"/><path d="M26 22h44l-6 61H32z" fill="none" ' + SK + '/><path d="M62 22a10 10 0 0 1 18 0z" fill="var(--f-cheese)" ' + SK2 + '/>'); },
+  bottle(){ return svgArt(SHADOW + '<path d="M42 8h12v15c0 5 9 9 9 18v37a6 6 0 0 1-6 6H39a6 6 0 0 1-6-6V41c0-9 9-13 9-18z" fill="var(--f-beer)" ' + SK + '/><rect x="33" y="49" width="30" height="18" fill="var(--f-label)" ' + SK2 + '/><path d="M38 40v6M38 70v8" stroke="var(--tile-dot)" stroke-width="3.5" stroke-linecap="round"/><path d="M44 12a8 8 0 0 1 13-5l-6 7z" fill="var(--f-lime)" ' + SK2 + '/>'); },
+  jarritos(){
+    const b = (x, c) => '<g transform="translate(' + x + ' 0)"><path d="M-4 10h8v3c0 4 0 9 2 12 4 6 7 9 7 17v38a5 5 0 0 1-5 5H-8a5 5 0 0 1-5-5V42c0-8 3-11 7-17 2-3 2-8 2-12z" fill="' + c + '" ' + SK2 + '/><rect x="-5" y="6" width="10" height="5" rx="1.5" fill="var(--f-cap)" ' + SK2 + '/><path d="M-9 50h18l-3 14h-12z" fill="var(--f-white)" opacity=".92"/><path d="M-6 30v40" stroke="var(--tile-dot)" stroke-width="2.6" stroke-linecap="round"/></g>';
+    return svgArt(SHADOW + b(26, 'var(--f-mandarina)') + b(48, 'var(--f-guayaba)') + b(70, 'var(--f-toronja)'));
+  },
+  colombiana(){ return svgArt(SHADOW + '<rect x="16" y="22" width="34" height="62" rx="8" fill="var(--f-yellow-can)" ' + SK + '/><path d="M16 46h34v12H16z" fill="var(--f-blue)"/><path d="M16 40h34" stroke="var(--rojo)" stroke-width="4"/><path d="M16 33h34M16 76h34" stroke="var(--art-ink)" stroke-width="2.2"/><rect x="16" y="22" width="34" height="62" rx="8" fill="none" ' + SK + '/><path d="M54 40h28l-4 44H58z" fill="var(--f-glass)" ' + SK + '/><path d="M56.4 50h23.2l-3 32H59.4z" fill="var(--f-mandarina)"/><rect x="61" y="54" width="7" height="7" rx="1.5" fill="var(--f-white)" opacity=".75"/><rect x="69" y="60" width="6" height="6" rx="1.5" fill="var(--f-white)" opacity=".65"/><path d="M54 40h28l-4 44H58z" fill="none" ' + SK + '/>'); },
+  clubcol(){ return svgArt(SHADOW + '<path d="M43 6h10v18c0 6 9 10 9 19v36a6 6 0 0 1-6 6H40a6 6 0 0 1-6-6V43c0-9 9-13 9-19z" fill="var(--f-amber)" ' + SK + '/><path d="M43 6h10v20H43z" fill="var(--f-gold)" ' + SK2 + '/><rect x="34" y="46" width="28" height="9" fill="var(--f-red)"/><rect x="34" y="55" width="28" height="7" fill="var(--f-gold)"/><path d="M39 66v10" stroke="var(--tile-dot)" stroke-width="3" stroke-linecap="round"/><path d="M43 6h10v18c0 6 9 10 9 19v36a6 6 0 0 1-6 6H40a6 6 0 0 1-6-6V43c0-9 9-13 9-19z" fill="none" ' + SK + '/>'); },
+  negra(){ return svgArt(SHADOW + '<path d="M42 10h12v14c0 6 12 10 12 22v32a7 7 0 0 1-7 7H37a7 7 0 0 1-7-7V46c0-12 12-16 12-22z" fill="var(--f-dark-beer)" ' + SK + '/><path d="M42 10h12v18H42z" fill="var(--f-gold)" ' + SK2 + '/><ellipse cx="48" cy="60" rx="15" ry="10" fill="var(--f-gold)" ' + SK2 + '/><path d="M38 60h20" stroke="var(--f-dark-beer)" stroke-width="3" stroke-linecap="round"/><path d="M36 46v8" stroke="var(--tile-dot)" stroke-width="3" stroke-linecap="round"/>'); },
+  kit(){ return svgArt(SHADOW + '<path d="M14 30h68l-4 16H18z" fill="var(--f-kraft)" ' + SK + '/><rect x="10" y="44" width="76" height="38" rx="5" fill="var(--f-kraft)" ' + SK + '/><path d="M10 52h76" stroke="var(--f-kraft-dk)" stroke-width="3"/><g><ellipse cx="30" cy="62" rx="15" ry="6" fill="var(--f-tortilla)" ' + SK2 + '/><ellipse cx="30" cy="57" rx="15" ry="6" fill="var(--f-tortilla)" ' + SK2 + '/><ellipse cx="30" cy="52" rx="15" ry="6" fill="var(--f-tortilla)" ' + SK2 + '/></g><circle cx="56" cy="60" r="7" fill="var(--f-leaf)" ' + SK2 + '/><circle cx="72" cy="60" r="7" fill="var(--f-tomato)" ' + SK2 + '/><circle cx="64" cy="72" r="6.5" fill="var(--f-white)" ' + SK2 + '/><path d="M20 73a10 10 0 0 1 16 0z" fill="var(--f-lime)" ' + SK2 + '/>'); },
+  taco(color){ return '<svg viewBox="0 0 96 96" aria-hidden="true" focusable="false"><ellipse cx="48" cy="87" rx="32" ry="4" fill="var(--art-shadow)"/>' +
+    '<path d="M13 50C13 40 21 34 29 37C32 28 43 26 48 32C53 26 64 27 67 35C75 33 84 39 83 50Z" fill="' + color + '" ' + SK2 + '/>' +
+    '<path d="M14 48l4-6 4 6 4-6 4 6 4-6 4 6 4-6 4 6 4-6 4 6 4-6 4 6 4-6 4 6 4-6 4 6" fill="none" stroke="var(--f-leaf)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<g stroke="var(--art-ink)" stroke-width="1.6"><circle cx="31" cy="38" r="3" fill="var(--f-white)"/><circle cx="50" cy="33" r="3" fill="var(--f-tomato)"/><circle cx="66" cy="39" r="3" fill="var(--f-white)"/></g>' +
+    '<path d="M9 48H87C87 70 70 82 48 82S9 70 9 48Z" fill="var(--f-tortilla)" ' + SK + '/>' +
+    '<g fill="var(--f-tortilla-dk)"><ellipse cx="30" cy="61" rx="3" ry="1.8"/><ellipse cx="53" cy="70" rx="3.4" ry="2"/><ellipse cx="67" cy="58" rx="2.6" ry="1.6"/><ellipse cx="40" cy="74" rx="2" ry="1.3"/></g></svg>'; },
+  tiramisu(){ return svgArt(SHADOW + '<path d="M22 28h52l-5 54H27z" fill="var(--f-glass)" ' + SK + '/><path d="M25 66h46l-1.6 15H26.6z" fill="var(--f-biscuit)"/><path d="M25.6 56h44.8l-.9 10H26.5z" fill="var(--f-cream)"/><path d="M26.4 47h43.2l-.8 9H27.2z" fill="var(--f-biscuit)"/><path d="M27.2 38h41.6l-.8 9H28z" fill="var(--f-cream)"/><path d="M23 30h50l-.6 8H23.6z" fill="var(--f-fruit)"/><path d="M22 28h52l-5 54H27z" fill="none" ' + SK + '/><path d="M18 28h60" stroke="var(--art-ink)" stroke-width="3" stroke-linecap="round"/>'); },
+  quinoa(){ return svgArt(SHADOW + '<path d="M24 34h48c0 22-6 32-24 32s-24-10-24-32z" fill="var(--f-glass)" ' + SK + '/><path d="M26.5 40h43c-1 16-7 22-21.5 22S27.5 56 26.5 40z" fill="var(--f-quinoa)"/><g fill="var(--f-cream)"><circle cx="36" cy="46" r="1.4"/><circle cx="44" cy="50" r="1.4"/><circle cx="52" cy="45" r="1.4"/><circle cx="58" cy="51" r="1.4"/><circle cx="40" cy="55" r="1.4"/><circle cx="50" cy="56" r="1.4"/></g><path d="M24 34h48c0 22-6 32-24 32s-24-10-24-32z" fill="none" ' + SK + '/><path d="M40 66h16v8H40z" fill="var(--f-glass)" ' + SK2 + '/><path d="M32 82h32" stroke="var(--art-ink)" stroke-width="4" stroke-linecap="round"/><path d="M58 18l14 26" stroke="var(--art-ink)" stroke-width="7" stroke-linecap="round"/><path d="M58 18l14 26" stroke="var(--f-cinnamon)" stroke-width="4" stroke-linecap="round"/><path d="M30 38q6-4 12 0" fill="none" stroke="var(--f-mandarina)" stroke-width="2.6" stroke-linecap="round"/>'); },
+  chia(){ return svgArt(SHADOW + '<path d="M24 26h48v52a6 6 0 0 1-6 6H30a6 6 0 0 1-6-6z" fill="var(--f-glass)" ' + SK + '/><path d="M26.5 64h43v13a5 5 0 0 1-5 5h-33a5 5 0 0 1-5-5z" fill="var(--f-passion)"/><path d="M26.5 34h43v30h-43z" fill="var(--f-chia)"/><g fill="var(--art-ink)" opacity=".55"><circle cx="33" cy="42" r=".9"/><circle cx="40" cy="48" r=".9"/><circle cx="48" cy="40" r=".9"/><circle cx="56" cy="47" r=".9"/><circle cx="62" cy="40" r=".9"/><circle cx="36" cy="56" r=".9"/><circle cx="46" cy="58" r=".9"/><circle cx="58" cy="57" r=".9"/></g><path d="M24 26h48v52a6 6 0 0 1-6 6H30a6 6 0 0 1-6-6z" fill="none" ' + SK + '/><path d="M44 30a14 14 0 0 1 28 0z" fill="var(--f-passion-shell)" ' + SK2 + '/><path d="M48 30a10 10 0 0 1 20 0z" fill="var(--f-passion)"/><g fill="var(--art-ink)"><circle cx="54" cy="26" r="1.2"/><circle cx="60" cy="25" r="1.2"/><circle cx="64" cy="28" r="1.2"/></g>'); },
+  mazamorra(){ return svgArt(SHADOW + '<g transform="rotate(-24 62 30)"><ellipse cx="62" cy="30" rx="22" ry="8" fill="var(--f-purple-corn)" ' + SK2 + '/><g fill="var(--f-purple)"><circle cx="50" cy="29" r="2"/><circle cx="56" cy="31" r="2"/><circle cx="62" cy="29" r="2"/><circle cx="68" cy="31" r="2"/><circle cx="74" cy="29" r="2"/></g></g><path d="M12 48h72c0 18-16 32-36 32S12 66 12 48z" fill="var(--f-white)" ' + SK + '/><ellipse cx="48" cy="48" rx="36" ry="9" fill="var(--f-purple)" ' + SK + '/><g fill="var(--f-cinnamon)"><circle cx="36" cy="46" r="1.6"/><circle cx="44" cy="50" r="1.4"/><circle cx="52" cy="45" r="1.6"/><circle cx="60" cy="49" r="1.4"/><circle cx="40" cy="44" r="1.2"/><circle cx="56" cy="51" r="1.2"/></g><rect x="44" y="44" width="7" height="5" rx="1.2" fill="var(--f-mango)"/>'); }
+};
+const artFor = it => ART[it.art](it.v);
+const tileClass = it => 'tile ' + (it.tile === 'sol' ? '' : it.tile);
+
+function garland(){
+  const colors = ['var(--verde)','var(--sol)','var(--naranja)','var(--rosa)','var(--rojo)','var(--morado)','#F7EBDD'];
+  let s = '<path d="M-20 10 Q 400 26 820 10 T 1660 10" fill="none" stroke="var(--wall-ink)" stroke-opacity=".7" stroke-width="1.6"/>';
+  for(let i = 0; i < 40; i++){
+    const x = 14 + i * 42; const y = 10 + 8 * Math.sin((x / 1640) * Math.PI * 2 * 2 + 0.2) + 6;
+    const c = colors[i % colors.length];
+    s += '<g class="fan" style="animation-delay:' + (i % 9) * 0.06 + 's"><path d="M' + x + ' ' + (y - 6) + 'v6" stroke="var(--wall-ink)" stroke-opacity=".7" stroke-width="1.4"/>' +
+      '<path d="M' + x + ' ' + y + 'c11 8 15 19 12 28-3 9-21 9-24 0-3-9 1-20 12-28z" fill="' + c + '"/>' +
+      '<path d="M' + x + ' ' + (y + 2) + 'v34M' + (x - 6) + ' ' + (y + 7) + 'c-3 8-3 18 0 27M' + (x + 6) + ' ' + (y + 7) + 'c3 8 3 18 0 27" fill="none" stroke="rgba(0,0,0,.14)" stroke-width="1.2"/></g>';
+  }
+  return '<svg class="garland' + (firstPaint ? ' play' : '') + '" viewBox="0 0 1640 66" preserveAspectRatio="xMinYMin slice" aria-hidden="true" focusable="false">' + s + '</svg>';
+}
+function islandSVG(sel){
+  const c = commune(sel); const d = commune('dolus');
+  let dots = COMMUNES.map(k => { const on = k.id === sel; return '<circle cx="' + k.x + '" cy="' + k.y + '" r="' + (on ? 6 : 3.4) + '" fill="' + (on ? 'var(--rosa)' : 'var(--ink-soft)') + '"' + (on ? ' stroke="var(--paper)" stroke-width="2"' : '') + '/>'; }).join('');
+  let route = (c && c.id !== 'dolus') ? '<path d="M' + d.x + ' ' + d.y + 'Q' + ((d.x + c.x) / 2) + ' ' + (Math.min(d.y, c.y) - 16) + ' ' + c.x + ' ' + c.y + '" fill="none" stroke="var(--rosa)" stroke-width="2" stroke-dasharray="4 4"/>' : '';
+  let label = '';
+  if(c){
+    const w = c.short.length * 6.4; let x, y = c.y + 4, anchor;
+    if(c.id === 'dolus'){ x = c.x; y = c.y + 20; anchor = 'middle'; }
+    else if(c.x < d.x){ x = c.x - 9; anchor = 'end'; if(x - w < 2){ x = Math.max(c.x - 10, 3); y = c.y + 19; anchor = 'start'; } }
+    else { x = c.x + 9; anchor = 'start'; if(x + w > 318){ x = Math.min(c.x + 10, 317); y = c.y + 19; anchor = 'end'; } }
+    label = '<text x="' + x + '" y="' + y + '" text-anchor="' + anchor + '" font-size="11" font-weight="800" fill="var(--ink)">' + esc(c.short) + '</text>';
+  }
+  return '<svg class="island" viewBox="0 0 320 92" role="img" aria-label="' + esc(t('islandCap') + (c ? ', ' + c.name : '')) + '">' +
+    '<path d="M10 44C14 34 30 30 48 27 76 22 108 19 140 21 176 23 214 22 244 24 270 26 292 34 306 46 312 52 304 60 290 62 266 66 238 70 206 70 172 70 138 70 104 66 70 63 40 60 22 56 12 52 8 48 10 44z" fill="var(--wall-soft)" stroke="var(--wall)" stroke-width="1.5"/>' +
+    '<path d="M248 24 L262 4" stroke="var(--ink-soft)" stroke-width="2.4" stroke-linecap="round"/><text x="266" y="11" font-size="9" fill="var(--ink-soft)">' + (S.lang === 'en' ? 'mainland' : 'continent') + '</text>' +
+    '<text x="12" y="84" font-size="9" fill="var(--ink-soft)">' + (S.lang === 'en' ? 'North' : 'Nord') + '</text><text x="308" y="84" text-anchor="end" font-size="9" fill="var(--ink-soft)">' + (S.lang === 'en' ? 'South' : 'Sud') + '</text>' +
+    route + dots +
+    '<path d="M' + d.x + ' ' + (d.y - 4) + 'l-6-12a7 7 0 1 1 12 0z" fill="var(--wall)" stroke="var(--paper)" stroke-width="1.5"/><circle cx="' + d.x + '" cy="' + (d.y - 19) + '" r="2.4" fill="var(--paper)"/>' + label + '</svg>';
+}
+const I = {
+  plus:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>',
+  minus:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 12h14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>',
+  close:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>',
+  bike:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17h6l3-6h3M9 9h3l2 2M15 7h3"/></svg>',
+  bag:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>',
+  chat:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg>',
+  sms:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M9 7h6M9 10h6M9 13h3"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg>',
+  camera:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
+  ext:'<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M19 5l-8 8M18 14v5H5V6h5"/></svg>',
+  back:'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',
+  chev:'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>',
+  sparkle:'<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="var(--rosa)"/></svg>'
+};
+
+/* ================= focus continuity ================= */
+function focusKeyOf(a){
+  if(!a || a === document.body || a === document.documentElement) return null;
+  if(a.id) return '#' + CSS.escape(a.id);
+  if(a.dataset && a.dataset.act){ let s = '[data-act="' + CSS.escape(a.dataset.act) + '"]'; ['id','i','v','k','c','f','s'].forEach(k => { if(a.dataset[k] != null) s += '[data-' + k + '="' + CSS.escape(a.dataset[k]) + '"]'; }); return s; }
+  return null;
+}
+function keepFocus(root, fn){ const a = document.activeElement; const k = (a && root.contains(a)) ? focusKeyOf(a) : null; fn(); if(k && !document.contains(a)){ try{ const n = root.querySelector(k); if(n && n.getClientRects().length) n.focus({preventScroll:true}); }catch(e){} } }
+
+/* ================= main page ================= */
+let firstPaint = true;
+function render(){
+  const app = $('#app');
+  keepFocus(app, () => { app.innerHTML = (location.hash === '#carte') ? viewCarte() : viewMain(); });
+  if(location.hash !== '#carte') firstPaint = false;
+  document.documentElement.lang = S.lang;
+  fitWordmark(); setupSpy();
+}
+function fitWordmark(){ const w = document.querySelector('.wordmark'); if(!w) return; w.style.fontSize = ''; const a = w.clientWidth, n = w.scrollWidth; if(a > 0 && n > a + 1){ const cur = parseFloat(getComputedStyle(w).fontSize); w.style.fontSize = Math.floor(cur * a / n) + 'px'; } }
+function tagHTML(it){
+  const out = [];
+  (it.tags || []).forEach(tg => {
+    if(tg === 'gf') out.push('<span class="tag">' + t('gf') + '</span>');
+    if(tg === 'vege') out.push('<span class="tag t-vege">' + t('vege') + '</span>');
+    if(tg === 'vegan') out.push('<span class="tag t-vege">' + t('vegan') + '</span>');
+    if(tg === 'spicy') out.push('<span class="tag t-spicy">' + t('spicy') + '</span>');
+    if(tg === 'moment') out.push('<span class="tag t-new">' + t('moment') + '</span>');
+    if(tg === 'arrivage') out.push('<span class="tag t-cold">' + t('arrivage') + '</span>');
+  });
+  if(it.cold) out.push('<span class="tag t-cold">' + t('cold') + '</span>');
+  if(it.alcohol) out.push('<span class="tag t-alc">' + t('alc') + '</span>');
+  return out.join('');
+}
+function row(it){
+  const name = L(it.name);
+  const meta = ['<span class="price">' + money(it.price) + '</span>'];
+  if(it.meal) meta.push('<span class="meal">' + t('mealFrom', {p:money(it.price + it.meal)}) + '</span>');
+  return '<li class="row"><div><h3 class="row-name"><button class="row-open" data-act="open" data-id="' + it.id + '">' + esc(name) + '</button></h3>' +
+    '<p class="row-desc">' + esc(L(it.desc)) + '</p><div class="row-meta">' + meta.join('') + tagHTML(it) + '</div></div>' +
+    '<div class="' + tileClass(it) + '">' + artFor(it) + '<button class="quick" data-act="quick" data-id="' + it.id + '" aria-label="' + esc(t('add') + ' : ' + name) + '">' + I.plus + '</button></div></li>';
+}
+function section(c){
+  if(c.id === 'kit') return kitSection(c);
+  const its = ITEMS.filter(i => i.cat === c.id);
+  return '<section class="sec" id="sec-' + c.id + '" data-c="' + c.id + '" aria-labelledby="h-' + c.id + '"><div class="sec-head"><h2 id="h-' + c.id + '">' + esc(L(c)) + (c.isNew ? '<span class="new-tag">' + t('newTag') + '</span>' : '') + '</h2>' +
+    (c.intro ? '<p>' + esc(L(c.intro)) + '</p>' : '') + '</div><ul class="rows">' + its.map(row).join('') + '</ul></section>';
+}
+function kitSection(c){
+  const sizes = KIT_SIZES.map(s => '<div class="ks"><b>' + s.label + '</b><span>' + t('tacos', {n:s.tacos}) + '</span><span>' + L(s.people).toLowerCase() + '</span><span class="price">' + money(s.price) + '</span></div>').join('');
+  return '<section class="sec" id="sec-kit" data-c="kit" aria-labelledby="h-kit"><div class="sec-head"><h2 id="h-kit">' + esc(L(c)) + '<span class="new-tag">' + t('newTag') + '</span></h2><p>' + t('kitIntro') + '</p></div>' +
+    '<div class="kitcard"><div class="tile">' + ART.kit() + '</div><div style="display:grid;gap:12px;min-width:0"><div class="kit-sizes">' + sizes + '</div>' +
+    '<div class="kitcard-cta"><button class="btn" data-act="kit-open">' + t('kitCta') + '</button><button class="link" data-act="fiesta-open">' + t('fiestaT') + '</button></div></div></div></section>';
+}
+function viewMain(){
+  const tt = totals();
+  const other = S.lang === 'fr' ? 'en' : 'fr';
+  const again = S.last && !S.basket.length ? '<div class="again"><p>' + t('lastOrder', {n:plural(S.last.count), total:money(S.last.total)}) + '</p><button data-act="reorder">' + t('reorder') + '</button></div>' : '';
+  const firstNew = CATS.findIndex(c => c.isNew);
+  const sections = CATS.map((c, i) => (i === firstNew ? '<div class="divider">' + I.sparkle + '<span>' + t('newDivider') + '</span>' + I.sparkle + '</div>' : '') + section(c)).join('');
+  const bar = S.basket.length ? '<div class="basket-bar"><button class="basket-btn" data-act="open-basket"><span class="bb-l"><span class="bb-n">' + tt.count + '</span>' + t('viewBasket') + '</span><span>' + money(tt.total) + '</span></button></div>' : '';
+  const sig = '<aside class="sig" aria-labelledby="sig-t">' + ART.torta('pork') + '<h2 id="sig-t">' + t('sigTitle') + '</h2><p>' + t('sigBody') + '</p><button data-act="cat" data-c="tortas">' + t('sigCta') + '</button></aside>';
+  return '<div class="ribbon"><div class="wrap"><b>' + t('ribbonB') + '</b><span>' + t('ribbon') + '</span></div></div>' +
+    '<header class="hero">' + garland() + '<div class="wrap hero-grid"><div class="hero-in">' +
+    '<div class="hero-row"><h1 class="wordmark" aria-label="Takit’os">TAKIT<span class="ap">’</span>OS</h1><button class="lang-btn" data-act="lang" data-l="' + other + '" lang="' + other + '" aria-label="' + t('langSwitch') + '">' + t('langOther') + '</button></div>' +
+    '<p class="tagline">' + t('tagline') + '</p>' +
+    '<p class="status"><span class="dot"></span><b>' + t('statusOpen') + '</b><span>' + t('statusUntil') + '</span></p><p class="status-sub">' + t('statusSub') + '</p>' +
+    '<div class="mode" role="group" aria-label="' + t('modeLabel') + '"><button data-act="mode" data-v="delivery" aria-pressed="' + (S.mode === 'delivery') + '">' + I.bike + t('delivery') + '</button><button data-act="mode" data-v="pickup" aria-pressed="' + (S.mode === 'pickup') + '">' + I.bag + t('pickup') + '</button></div>' +
+    again + '</div>' + sig + '</div></header>' +
+    '<nav class="cats" aria-label="' + t('categories') + '"><div class="wrap cats-in">' + CATS.map(c => '<button class="chip" data-act="cat" data-c="' + c.id + '" aria-current="false">' + (c.isNew ? '<span class="new-dot" aria-hidden="true"></span>' : '') + esc(c.chip ? L(c.chip) : L(c)) + (c.isNew ? '<span class="sr"> (' + t('newTag') + ')</span>' : '') + '</button>').join('') + '</div></nav>' +
+    '<div class="wrap layout"><div class="menu">' + sections + '</div><aside class="basket-col" aria-label="' + t('basket') + '">' + basketPanel('aside') + '</aside></div>' + footer() + bar;
+}
+function footer(){
+  return '<footer class="wrap foot"><button class="carte-link" data-act="carte"><span><b>' + t('carteLink') + '</b><span>' + t('carteSub') + '</span></span>' + I.chev + '</button>' +
+    '<nav class="foot-links" aria-label="' + t('legalLinks') + '"><button data-act="legal">' + t('mentions') + '</button><button data-act="legal">' + t('cgv') + '</button><button data-act="legal">' + t('privacy') + '</button><button data-act="allergen-table">' + t('allergenTable') + '</button></nav>' +
+    '<p><b>Takit’os</b>, 49 ter Grande Rue, 17550 Dolus-d’Oléron</p><p>' + t('phones') + ' <span class="sel">' + FIXED_LINE + '</span> ' + (S.lang === 'en' ? 'or' : 'ou') + ' <span class="sel">' + ORDER_LINE + '</span></p><p>' + t('hoursBody') + ' ' + t('hoursWhen') + '</p>' +
+    '<p class="foot-demo">' + t('footDemo') + '</p></footer>';
+}
+
+/* ================= basket panel ================= */
+function basketPanel(where){
+  if(!S.basket.length) return '<div class="bp"><h2 class="bp-title"' + (where === 'sheet' ? ' id="sheet-title"' : '') + '>' + t('yourOrder') + '</h2><p class="bp-empty">' + t('emptyBasket') + '</p></div>';
+  const tt = totals(); const c = commune(S.form.commune);
+  const lines = S.basket.map((l, i) => {
+    const sum = lineSummary(l); const it = l.kit ? null : item(l.id);
+    const meal = (it && it.cat === 'tortas' && l.opts.formule === 'seule') ? '<button class="link" data-act="line-meal" data-i="' + i + '">' + t('makeMeal', {p:money(it.meal)}) + '</button>' : '';
+    return '<li class="bl-line"><div class="bl-main"><b>' + esc(lineName(l)) + '</b>' + (sum ? '<span class="bl-opt">' + esc(sum) + '</span>' : '') + (l.note ? '<span class="bl-note">« ' + esc(l.note) + ' »</span>' : '') + meal + '</div>' +
+      '<div class="bl-side"><span class="bl-price">' + money(lineUnit(l) * l.qty) + '</span><div class="qty sm"><button data-act="line-dec" data-i="' + i + '" aria-label="' + esc(t('less') + ' : ' + lineName(l)) + '">' + I.minus + '</button><span>' + l.qty + '</span><button data-act="line-inc" data-i="' + i + '" aria-label="' + esc(t('more') + ' : ' + lineName(l)) + '">' + I.plus + '</button></div></div></li>';
+  }).join('');
+  const has = id => S.basket.some(l => l.id === id);
+  const sugIds = ['p-patacones', 'l-jarritos', 's-chia'].filter(id => !has(id));
+  const sug = sugIds.length ? '<div class="suggest"><span class="small">' + t('withIt') + '</span><div class="suggest-row">' + sugIds.map(id => '<button class="sug" data-act="quick" data-id="' + id + '">+ ' + esc(L(item(id).name)) + ' ' + money(item(id).price) + '</button>').join('') + '</div></div>' : '';
+  const cut = '<label class="check"><input type="checkbox" id="cutlery-' + where + '" data-ch="cutlery"' + (S.cutlery ? ' checked' : '') + '><span>' + t('cutlery') + '<br><span class="small">' + t('cutleryHint') + '</span></span></label>';
+  const promo = S.promo === 'BIENVENUE' ? '<p class="msg ok">' + t('promoOk') + ' <button class="link" data-act="promo-remove">' + t('promoRemove') + '</button></p>'
+    : '<div class="field"><label for="promo-' + where + '">' + t('promo') + '</label><div class="promo"><input id="promo-' + where + '" data-in="promo" autocomplete="off" placeholder="BIENVENUE"><button class="btn ghost" data-act="promo" data-s="promo-' + where + '">' + t('apply') + '</button></div>' + (S.promoMsg ? '<p class="msg bad">' + t(S.promoMsg === 'used' ? 'promoUsed' : 'promoBad') + '</p>' : '') + '</div>';
+  const rows = '<dl class="totals"><div><dt>' + t('subtotal') + '</dt><dd>' + money(tt.sub) + '</dd></div>' + (tt.disc ? '<div><dt>' + t('discount') + ' BIENVENUE</dt><dd>−' + money(tt.disc) + '</dd></div>' : '') +
+    (S.mode === 'delivery' ? '<div><dt>' + t('fee') + (c ? ' (' + esc(c.short) + ')' : '') + '</dt><dd>' + (c ? money(tt.fee) : t('feeLater')) + '</dd></div>' : '') + '<div class="grand"><dt>' + t('total') + '</dt><dd>' + money(tt.total) + '</dd></div></dl>';
+  const block = basketBlock();
+  const cta = where === 'aside' ? '<button class="btn-main" data-act="checkout" data-s="2"' + (block ? ' disabled' : '') + '><span>' + t('checkout') + '</span><span>' + money(tt.total) + '</span></button>' + (block ? '<p class="block">' + block + '</p>' : '') : (block ? '<p class="block">' + block + '</p>' : '');
+  return '<div class="bp"><h2 class="bp-title"' + (where === 'sheet' ? ' id="sheet-title"' : '') + '>' + t('yourOrder') + '</h2><ul class="bl">' + lines + '</ul>' + sug + cut + promo + rows + cta + '</div>';
+}
+
+/* ================= sheets ================= */
+let lastFocus = null;
+function openSheet(kind, data){
+  const fresh = !SH;
+  if(fresh) lastFocus = document.activeElement;
+  SH = Object.assign({kind}, data || {});
+  if(!fresh) $('#sheet').innerHTML = '';
+  renderSheet();
+  const w = $('#sheet'); w.hidden = false;
+  document.documentElement.classList.add('locked'); $('#app').inert = true;
+  setTimeout(() => { const f = w.querySelector('[data-autofocus]') || w.querySelector('.sh-close'); if(f) f.focus({preventScroll:true}); }, 40);
+}
+function closeSheet(){
+  const w = $('#sheet'); w.hidden = true; w.innerHTML = ''; SH = null; clearTimeout(replyTimer);
+  document.documentElement.classList.remove('locked'); $('#app').inert = false;
+  if(lastFocus && document.contains(lastFocus)) try{ lastFocus.focus({preventScroll:true}); }catch(e){}
+}
+function renderSheet(keepScroll){
+  if(!SH) return;
+  const w = $('#sheet'); const sc = w.querySelector('.sheet-scroll'); const top = (keepScroll && sc) ? sc.scrollTop : 0;
+  const fn = {item:sheetItem, kit:sheetKit, checkout:sheetCheckout, fiesta:sheetFiesta, allergens:sheetAllergens}[SH.kind];
+  let box = w.querySelector('.sheet');
+  if(!box){ w.innerHTML = '<div class="sheet-back" data-act="close"></div><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title"></div>'; box = w.querySelector('.sheet'); }
+  keepFocus(box, () => { box.innerHTML = fn(); });
+  if(top){ const n = w.querySelector('.sheet-scroll'); if(n) n.scrollTop = top; }
+}
+const closeBtn = () => '<button class="sh-close" data-act="close" aria-label="' + t('close') + '">' + I.close + '</button>';
+const topBar = (left, cls) => '<div class="sh-top' + (cls ? ' ' + cls : '') + '">' + (left || '<span></span>') + closeBtn() + '</div>';
+
+function photoBlock(ph, key){
+  if(!ph) return '';
+  const open = SH && SH.photo === key;
+  const files = ph.files;
+  if(!open) return '<div class="ph"><button class="ph-toggle" data-act="photo" data-k="' + key + '"><img src="' + files[0] + '" alt="" loading="lazy"><span>' + I.camera + (files.length > 1 ? t('seePhotos') : t('seePhoto')) + '</span></button></div>';
+  return '<div class="ph"><div class="ph-open"><div class="ph-imgs' + (files.length > 1 ? ' two' : '') + '">' + files.map(f => '<img src="' + f + '" alt="' + esc(L(ph.alt)) + '"' + (ph.product ? ' class="product"' : '') + '>').join('') + '</div>' +
+    '<div class="ph-cap"><span>' + esc(L(ph.cap)) + '</span><button class="link" data-act="photo" data-k="">' + t('hidePhoto') + '</button></div></div></div>';
+}
+function flavourBlock(tastes, ingr){
+  if(!(tastes && tastes.length) && !(ingr && ingr.length)) return '';
+  const tags = (tastes || []).map(k => '<span class="tag">' + esc(L(TASTES[k])) + '</span>').join('');
+  const list = (ingr || []).map(k => { const g = INGR[k]; return '<li><b>' + esc(L(g.n)) + '</b><span>' + esc(L(g.t)) + '</span><a href="https://www.google.com/search?q=' + encodeURIComponent(g.q) + '" target="_blank" rel="noopener noreferrer">' + t('lookUp') + '<span class="sr"> ' + esc(L(g.n)) + ' (' + t('newTab') + ')</span>' + I.ext + '</a></li>'; }).join('');
+  return '<section class="flav" aria-label="' + t('flavours') + '"><h3>' + t('flavours') + '</h3>' + (tags ? '<div class="tags">' + tags + '</div>' : '') + (list ? '<ul class="ingr">' + list + '</ul>' : '') + '</section>';
+}
+function infoBlock(allergens, meats, opts){
+  const al = allergens.length ? allergens.map(a => L(ALLERGENS[a])).join(', ') : t('noneExpected');
+  const meat = (meats || []).map(m => '<div class="info-row"><b>' + t('origin', {meat:t('meat_' + m)}) + '</b><span class="todo">' + t('toFill') + '</span></div>').join('');
+  const fm = opts && opts.drink ? '' : '<div class="info-row"><b>' + t('homemade') + '</b><span>' + t('homemadeTodo') + '</span></div>';
+  const alc = opts && opts.alcohol ? '<div class="legal-box"><span>' + T.fr.minors + '</span><span>' + T.fr.health + '</span></div>' : '';
+  return '<details class="info"><summary>' + t('infoTitle') + '</summary><div class="info-body"><div class="info-row"><b>' + t('allergens') + '</b><span>' + esc(al) + '</span><span class="demo-hint">' + t('allergenDemo') + '</span></div>' + meat + fm + alc + '</div></details>';
+}
+function optionsHTML(it){
+  return groupsFor(it, SH.opts).map(g => {
+    let lastGrp = null;
+    const chips = g.choices.map((c, ci) => {
+      const id = 'o-' + g.key + '-' + ci; let head = '';
+      if(c.grp && c.grp !== lastGrp){ head = '<span class="opt-group-label">' + (c.grp === 'soda' ? t('soda') : t('juice')) + '</span>'; lastGrp = c.grp; }
+      const lab = typeof c.label === 'string' ? c.label : L(c.label);
+      const extra = (g.key === 'formule' && c.v === 'menu') ? ' <small>+' + money(c.delta) + '</small>' : '';
+      return head + '<input class="sr" type="radio" name="o-' + g.key + '" id="' + id + '" value="' + esc(c.v) + '" data-ch="opt" data-k="' + g.key + '"' + (SH.opts[g.key] === c.v ? ' checked' : '') + '><label class="opt" for="' + id + '">' + esc(lab) + extra + '</label>';
+    }).join('');
+    return '<fieldset><legend>' + t(g.label) + '</legend><div class="opts">' + chips + '</div></fieldset>';
+  }).join('');
+}
+function sheetItem(){
+  const it = item(SH.id); const price = itemUnit(it, SH.opts) * SH.qty;
+  const drink = it.cat === 'boissons' || it.cat === 'latinos';
+  const meats = it.meat ? [it.meat] : [];
+  const sticker = '<div class="sh-price"><span class="price">' + money(it.price) + '</span>' + (it.meal ? '<span class="meal">' + t('mealFrom', {p:money(it.price + it.meal)}) + '</span>' : '') + '</div>';
+  const tags = tagHTML(it) + (it.isNew ? '<span class="tag t-new">' + t('newTag') + '</span>' : '');
+  return topBar('', 'tile-top ' + (it.tile === 'sol' ? '' : it.tile)) + '<div class="sheet-scroll"><div class="sh-art ' + (it.tile === 'sol' ? '' : it.tile) + '">' + artFor(it) + '</div><div class="pad">' +
+    '<h2 class="sh-title" id="sheet-title">' + esc(L(it.name)) + '</h2>' + sticker +
+    '<p class="sh-desc">' + esc(L(it.desc)) + '</p>' + (tags ? '<div class="tags">' + tags + '</div>' : '') +
+    (it.story ? '<div class="story"><h3>' + t('story') + '</h3><p>' + esc(L(it.story)) + '</p></div>' : '') +
+    photoBlock(it.photos, it.id) + optionsHTML(it) +
+    (drink || it.cat === 'desserts' ? '' : '<div class="field"><label for="item-note">' + t('note') + '</label><textarea id="item-note" rows="2" data-in="item-note">' + esc(SH.note) + '</textarea></div>') +
+    flavourBlock(it.tastes, it.ingr) + infoBlock(lineAllergens({id:it.id, opts:SH.opts}), meats, {drink, alcohol:it.alcohol}) + '</div></div>' +
+    '<div class="sheet-foot"><div class="qty"><button data-act="sh-dec" aria-label="' + t('less') + '">' + I.minus + '</button><span>' + SH.qty + '</span><button data-act="sh-inc" aria-label="' + t('more') + '">' + I.plus + '</button></div>' +
+    '<button class="btn-main" data-act="sh-add"><span>' + t('addCta') + '</span><span>' + money(price) + '</span></button></div>';
+}
+
+/* ---- taco kit builder ---- */
+function sheetKit(){
+  const k = SH.kit; const sz = KIT_SIZES.find(s => s.id === k.size);
+  const sizes = KIT_SIZES.map(s => { const dots = '<span class="tacos-dots" aria-hidden="true">' + '<i></i>'.repeat(Math.min(s.tacos, 20)) + '</span>'; return '<input class="sr" type="radio" name="kit-size" id="ks-' + s.id + '" value="' + s.id + '" data-ch="kit-size"' + (k.size === s.id ? ' checked' : '') + '><label class="size" for="ks-' + s.id + '">' + dots + '<span><b>' + s.label + '</b><br><span class="small">' + t('tacos', {n:s.tacos}) + ', ' + L(s.people).toLowerCase() + ', ' + (s.n === 1 ? '1 ' + (S.lang === 'en' ? 'filling' : 'garniture') : s.n + ' ' + (S.lang === 'en' ? 'fillings' : 'garnitures')) + '</span></span><span class="price">' + money(s.price) + '</span></label>'; }).join('');
+  const full = k.fillings.length >= sz.n;
+  const fills = FILLINGS.map(f => { const on = k.fillings.includes(f.id); return '<input class="sr" type="checkbox" id="kf-' + f.id + '" value="' + f.id + '" data-ch="kit-fill"' + (on ? ' checked' : '') + (!on && full ? ' disabled' : '') + '><label class="fill" for="kf-' + f.id + '">' + ART.taco(f.color) + '<span><b>' + f.name + '</b>' + (f.premium ? ' <span class="tag t-new">' + t('premium') + '</span>' : '') + '<p>' + esc(L(f.desc)) + '</p><span class="tags">' + f.tastes.map(x => '<span class="tag">' + esc(L(TASTES[x])) + '</span>').join('') + '</span></span></label>'; }).join('');
+  const sp = kitSplit(k); const split = k.fillings.length ? '<p class="hint">' + t('split', {s:k.fillings.map((f, i) => esc(FILLINGS.find(x => x.id === f).name) + ' ×' + sp[i]).join(', ')}) + '</p>' : '';
+  const sides = sz.id === 'familia' ? '<div style="display:grid;gap:10px"><h3 class="steps-h"><i>3</i>' + t('kitStep3') + '</h3><div class="opts">' + KIT_SIDES.map(sd => '<input class="sr" type="radio" name="kit-side" id="kside-' + sd.id + '" value="' + sd.id + '" data-ch="kit-side"' + (k.side === sd.id ? ' checked' : '') + '><label class="opt" for="kside-' + sd.id + '">' + esc(L(sd)) + '</label>').join('') + '</div><p class="hint">' + t('dessertsIncl', {d:esc(L(item(DESSERT_OF_DAY).name))}) + '</p></div>' : '';
+  const picked = k.fillings.length ? '<li><b>' + k.fillings.map((f, i) => esc(FILLINGS.find(x => x.id === f).name) + ' ×' + sp[i]).join(', ') + '</b></li>' : '<li><b>' + t('fillingsTodo', {n:sz.n}) + '</b></li>';
+  const extras = sz.id === 'familia' ? '<li><b>' + esc(L(KIT_SIDES.find(x => x.id === k.side))) + '</b></li><li><b>' + t('dessertsLine', {d:esc(L(item(DESSERT_OF_DAY).name))}) + '</b></li>' : '';
+  const box = '<div class="story"><h3>' + t('kitSummary', {size:sz.label}) + '</h3><ul class="box-list">' + picked + extras + L(sz.box).map(x => '<li>' + esc(x) + '</li>').join('') + '</ul></div>';
+  const allIngr = [...new Set(k.fillings.flatMap(f => FILLINGS.find(x => x.id === f).ingr).concat(['salsaverde','pimientos','pico']))];
+  const meats = [...new Set(k.fillings.map(f => FILLINGS.find(x => x.id === f).meat).filter(Boolean))];
+  const line = {kit:k};
+  const err = (SH.kitErr && !k.fillings.length) ? '<p class="err" role="alert">' + t('pickOne') + '</p>' : '';
+  return topBar('', 'tile-top naranja') + '<div class="sheet-scroll"><div class="sh-art naranja">' + ART.kit() + '</div><div class="pad">' +
+    '<h2 class="sh-title" id="sheet-title">' + t('kitTitle') + '</h2><p class="sh-desc">' + t('kitIntro') + '</p>' + photoBlock(KIT_PHOTO, 'kit') +
+    '<div style="display:grid;gap:10px"><h3 class="steps-h"><i>1</i>' + t('kitStep1') + '</h3><div class="sizes">' + sizes + '</div></div>' +
+    '<div style="display:grid;gap:10px"><h3 class="steps-h"><i>2</i>' + t('kitStep2') + '</h3><p class="hint">' + (sz.n === 1 ? t('pickN1') : t('pickN', {n:sz.n})) + '</p><div class="fills">' + fills + '</div>' + split + err + '</div>' +
+    sides + box +
+    '<div class="field"><label for="kit-note">' + t('note') + '</label><textarea id="kit-note" rows="2" data-in="kit-note">' + esc(SH.note || '') + '</textarea></div>' +
+    '<div style="display:grid;gap:8px"><h3 class="info-h">' + t('howTo') + '</h3><ol class="howto"><li>' + t('how1') + '</li><li>' + t('how2') + '</li><li>' + t('how3') + '</li></ol></div>' +
+    flavourBlock([], allIngr) + infoBlock(lineAllergens(line), meats, {}) +
+    '<div class="fiesta"><b>' + t('fiestaT') + '</b><span class="small">' + t('fiestaL') + '</span><button class="link" data-act="fiesta-open">' + t('fiestaCta') + '</button></div></div></div>' +
+    '<div class="sheet-foot"><div class="qty"><button data-act="kit-dec" aria-label="' + t('less') + '">' + I.minus + '</button><span>' + SH.qty + '</span><button data-act="kit-inc" aria-label="' + t('more') + '">' + I.plus + '</button></div>' +
+    '<button class="btn-main" data-act="kit-add"><span>' + t('addCta') + '</span><span>' + money(kitUnit(k) * SH.qty) + '</span></button></div>';
+}
+
+/* ---- fiesta request ---- */
+function sheetFiesta(){
+  const f = SH.f;
+  if(SH.sent) return topBar('') + '<div class="sheet-scroll"><div class="pad"><h2 class="sh-title" id="sheet-title">' + t('fiestaSent') + '</h2><div class="chat"><div class="bub me">' + esc(fiestaMessage().split('\n').slice(0, 4).join('\n')) + '\n…</div><div class="bub them">' + t('fiestaReply') + '\nTakit’os</div></div><p class="demo-hint">' + t('demoReply') + '</p></div></div><div class="sheet-foot"><button class="btn-main" data-act="close"><span>' + t('backMenu') + '</span><span></span></button></div>';
+  const wishes = FILLINGS.map(x => ({id:x.id, name:x.name, pre:false})).concat(PREORDER_FILLINGS.map(x => ({id:x.id, name:x.name, pre:true})));
+  return topBar('') + '<div class="sheet-scroll"><div class="pad"><h2 class="sh-title" id="sheet-title">' + t('fiestaTitle') + '</h2><p class="sh-desc">' + t('fiestaL') + '</p>' +
+    '<div class="field"><label>' + t('guests') + '</label><div class="qty" style="justify-self:start"><button data-act="fz-dec" aria-label="' + t('less') + '">' + I.minus + '</button><span>' + f.guests + '</span><button data-act="fz-inc" aria-label="' + t('more') + '">' + I.plus + '</button></div></div>' +
+    '<div class="field"><label for="fz-date">' + t('date') + '</label><input type="date" id="fz-date" data-ch="fz-date" value="' + esc(f.date) + '" min="' + esc(f.minDate) + '"><p class="hint">' + t('fzDateHint') + '</p>' + (fiestaErr() ? '<p class="err" role="alert">' + fiestaErr() + '</p>' : '') + '</div>' +
+    '<fieldset><legend>' + t('time') + '</legend><div class="opts">' + ['12:00','12:30','19:00','19:30','20:00'].map(h => '<input class="sr" type="radio" name="fz-time" id="fzt-' + h.replace(':','') + '" value="' + h + '" data-ch="fz-time"' + (f.time === h ? ' checked' : '') + '><label class="opt" for="fzt-' + h.replace(':','') + '">' + h + '</label>').join('') + '</div></fieldset>' +
+    '<fieldset><legend>' + t('wishes') + '</legend><div class="opts">' + wishes.map(w => '<input class="sr" type="checkbox" id="fzw-' + w.id + '" value="' + w.id + '" data-ch="fz-wish"' + (f.wishes.includes(w.id) ? ' checked' : '') + '><label class="opt" for="fzw-' + w.id + '">' + esc(w.name) + (w.pre ? ' <small>' + t('preorderNote') + '</small>' : '') + '</label>').join('') + '</div></fieldset>' +
+    '<div class="field"><label for="fz-note">' + t('fiestaNote') + '</label><textarea id="fz-note" rows="2" data-in="fz-note">' + esc(f.note) + '</textarea></div>' +
+    '<p class="hint"><b>' + t('fiestaEst', {p:money(f.guests * 15), n:f.guests}) + '</b></p></div></div>' +
+    '<div class="sheet-foot"><button class="btn" style="flex:1" data-act="fz-send" data-v="WhatsApp" aria-label="' + t('viaWa') + '"' + (fiestaErr() ? ' disabled' : '') + '>' + I.chat + 'WhatsApp</button><button class="btn ghost" style="flex:1" data-act="fz-send" data-v="SMS" aria-label="' + t('viaSms') + '"' + (fiestaErr() ? ' disabled' : '') + '>' + I.sms + 'SMS</button></div>';
+}
+function dayFrom(days){ const d = new Date(); d.setHours(12, 0, 0, 0); d.setDate(d.getDate() + days); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+function openDayFrom(days){ let k = days; while([2, 3].includes(new Date(dayFrom(k) + 'T12:00').getDay())) k++; return dayFrom(k); }
+function fiestaErr(){ const f = SH.f; if(!/^\d{4}-\d{2}-\d{2}$/.test(f.date || '')) return t('fzErrDate'); if(f.date < f.minDate) return t('fzErrSoon'); if([2, 3].includes(new Date(f.date + 'T12:00').getDay())) return t('fzErrClosed'); return ''; }
+function frDate(iso){ try{ return new Intl.DateTimeFormat('fr-FR', {weekday:'long', day:'numeric', month:'long'}).format(new Date(iso + 'T12:00')); }catch(e){ return iso; } }
+function fiestaMessage(){
+  const f = SH.f; const names = f.wishes.map(id => (FILLINGS.find(x => x.id === id) || PREORDER_FILLINGS.find(x => x.id === id)).name);
+  return 'Bonjour Takit’os, demande de Fiesta (via le site) :\n' + f.guests + ' personnes, le ' + frDate(f.date) + ' à ' + f.time + '\nGarnitures souhaitées : ' + (names.join(', ') || 'au choix du chef') + (f.note ? '\nPrécision : ' + f.note : '') + '\nEstimation : ' + moneyFr(f.guests * 15) + (S.lang === 'en' ? '\n(Client anglophone)' : '');
+}
+
+/* ---- checkout ---- */
+function stepsHTML(n){ const names = t('steps'); return '<div class="steps-wrap"><ol class="steps" aria-label="' + t('stepsLabel') + '">' + names.map((s, i) => '<li class="' + (n >= i + 1 ? 'on' : '') + '"' + (n === i + 1 ? ' aria-current="step"' : '') + '><span class="sr">' + s + '</span></li>').join('') + '</ol><p class="steps-cur" aria-hidden="true">' + t('stepOf', {n, m:names.length, s:names[n - 1]}) + '</p></div>'; }
+function sheetCheckout(){
+  const st = SH.step;
+  if(st === 1){
+    const tt = totals(); const block = basketBlock();
+    return topBar(stepsHTML(1)) + '<div class="sheet-scroll"><div class="pad">' + basketPanel('sheet') + '</div></div>' +
+      '<div class="sheet-foot"><button class="btn-main" data-act="step" data-s="2"' + (block ? ' disabled' : '') + '><span>' + t('continue') + '</span><span>' + money(tt.total) + '</span></button></div>';
+  }
+  if(st === 2) return stepWhere();
+  if(st === 3) return stepYou();
+  if(st === 4) return stepSend();
+  return stepWait();
+}
+/* the parts of step 2 that follow the address; they are refreshed in place while typing,
+   so the address field is never rebuilt (rebuilding it would close the phone keyboard) */
+function whereParts(){
+  const f = S.form; const c = commune(f.commune); const det = detect(f.addr);
+  const p = {sugg:'', zone:'', slots:''};
+  if(S.mode === 'delivery'){
+    const sug = SH.sugg ? suggestions(f.addr) : [];
+    p.sugg = sug.length ? '<ul class="sugg" aria-label="' + t('addrSugg') + '">' + sug.map(s => '<li><button data-act="pick-place" data-v="' + esc(s.label) + '" data-c="' + s.c + '"><span>' + esc(s.label) + '</span><small>' + esc(commune(s.c).short) + '</small></button></li>').join('') + '</ul>' : '';
+    if(det.mainland && !c) p.zone = '<div class="alert"><p>' + t('mainland') + '</p><button class="btn wall" data-act="mode" data-v="pickup" style="justify-self:start">' + t('toPickup') + '</button></div>';
+    else if(c) p.zone = '<div class="island-wrap">' + islandSVG(c.id) + '<span class="small">' + t('islandCap') + '</span></div><div class="commune"><b>' + esc(c.name) + '</b><span class="small">' + t('zoneLine', {fee:money(c.fee), min:money(c.min), eta:etaFor('delivery', c)}) + '</span><button class="link" data-act="commune-change">' + t('change') + '</button></div>';
+    else if(norm(f.addr).length >= 3 || SH.askCommune) p.zone = '<div style="display:grid;gap:8px"><b style="font-size:14.5px">' + t('communeAsk') + '</b><div class="cchips">' + (/(^|\D)17370(\D|$)/.test(f.addr) ? COMMUNES.filter(k => k.id === 'sttrojan' || k.id === 'grandvillage') : COMMUNES).map(k => '<button class="cchip" data-act="commune" data-c="' + k.id + '">' + esc(k.short) + '</button>').join('') + '</div></div>';
+    const minMsg = minBlock(); if(minMsg) p.zone += '<p class="err">' + minMsg + '</p>';
+  }
+  if(!(S.mode === 'delivery' && !c)){
+    const asap = asapAt();
+    p.slots = '<fieldset><legend>' + t('when') + '</legend><div class="opts">' +
+      '<input class="sr" type="radio" name="slot" id="sl-asap" value="asap" data-ch="slot"' + (f.slot === 'asap' ? ' checked' : '') + '><label class="opt" for="sl-asap">' + t('asap', {t:hm(asap)}) + '</label>' +
+      slotList().map(s => '<input class="sr" type="radio" name="slot" id="sl-' + hm(s.m).replace(':','') + '" value="' + hm(s.m) + '" data-ch="slot"' + (f.slot === hm(s.m) ? ' checked' : '') + (s.full ? ' disabled' : '') + '><label class="opt" for="sl-' + hm(s.m).replace(':','') + '">' + hm(s.m) + (s.full ? ' <small>' + t('full') + '</small>' : '') + '</label>').join('') + '</div></fieldset>';
+  }
+  return p;
+}
+const liveCache = {};
+function updateWhere(){
+  if(!(SH && SH.kind === 'checkout' && SH.step === 2)) return;
+  const p = whereParts();
+  [['w-sugg', p.sugg], ['w-zone', p.zone], ['w-slots', p.slots], ['w-err', '']].forEach(([id, html]) => { const n = document.getElementById(id); if(n && liveCache[id] !== html){ n.innerHTML = html; liveCache[id] = html; } });
+  SH.err = '';
+  const b = document.querySelector('#sheet .sheet-foot .btn-main span:last-child'); if(b) b.textContent = money(totals().total);
+}
+function stepWhere(){
+  const f = S.form; const p = whereParts();
+  ['w-sugg','w-zone','w-slots','w-err'].forEach(k => { delete liveCache[k]; });
+  const seg = '<div class="seg" role="group" aria-label="' + t('modeLabel') + '"><button data-act="mode" data-v="delivery" aria-pressed="' + (S.mode === 'delivery') + '">' + I.bike + t('delivery') + '</button><button data-act="mode" data-v="pickup" aria-pressed="' + (S.mode === 'pickup') + '">' + I.bag + t('pickup') + '</button></div>';
+  const where = S.mode === 'delivery'
+    ? '<div class="field"><label for="f-addr">' + t('addr') + '</label><input id="f-addr" data-in="addr" autocomplete="street-address" enterkeyhint="next" placeholder="' + esc(t('addrPh')) + '" value="' + esc(f.addr) + '"><div id="w-sugg">' + p.sugg + '</div><p class="hint">' + t('addrHint') + '</p></div>' +
+      '<div id="w-zone" aria-live="polite" style="display:grid;gap:12px">' + p.zone + '</div>' +
+      '<div class="field"><label for="f-details">' + t('details') + '</label><input id="f-details" data-in="details" placeholder="' + esc(t('detailsPh')) + '" value="' + esc(f.details) + '"></div>'
+    : '<div class="story"><p><b>Takit’os</b></p><p>' + t('pickupLine', {eta:etaFor('pickup', null)}) + '</p></div>';
+  return topBar(stepsHTML(2)) + '<div class="sheet-scroll"><div class="pad"><h2 class="sh-title" id="sheet-title">' + (S.mode === 'delivery' ? t('whereTitle') : t('pickupTitle')) + '</h2>' + seg + where +
+    '<div id="w-slots">' + p.slots + '</div><div id="w-err">' + (SH.err ? '<p class="err" role="alert">' + SH.err + '</p>' : '') + '</div></div></div>' +
+    '<div class="sheet-foot"><button class="btn ghost" data-act="step" data-s="1">' + t('back') + '</button><button class="btn-main" data-act="step" data-s="3"><span>' + t('continue') + '</span><span>' + money(totals().total) + '</span></button></div>';
+}
+function stepYou(){
+  const f = S.form; const alc = hasAlcohol(S.basket);
+  const radio = (name, val, label) => '<input class="sr" type="radio" name="' + name + '" id="r-' + name + '-' + val + '" value="' + val + '" data-ch="' + name + '"' + (f[name] === val ? ' checked' : '') + '><label class="opt" for="r-' + name + '-' + val + '">' + label + '</label>';
+  return topBar(stepsHTML(3)) + '<div class="sheet-scroll"><div class="pad"><h2 class="sh-title" id="sheet-title">' + t('youTitle') + '</h2>' +
+    '<div class="field"><label for="f-name">' + t('name') + '</label><input id="f-name" data-in="name" autocomplete="given-name" placeholder="' + esc(t('namePh')) + '" value="' + esc(f.name) + '"></div>' +
+    '<fieldset><legend>' + (S.mode === 'delivery' ? t('payD') : t('payP')) + '</legend><div class="opts">' + radio('pay', 'card', t('card')) + radio('pay', 'cash', t('cash')) + '</div></fieldset>' +
+    '<div class="field"><label for="f-allergy">' + t('allergy') + '</label><input id="f-allergy" data-in="allergy" aria-describedby="allergy-hint" placeholder="' + esc(t('allergyPh')) + '" value="' + esc(f.allergy) + '"><p class="hint" id="allergy-hint">' + t('allergyHint') + '</p></div>' +
+    (alc ? '<label class="check"><input type="checkbox" id="f-age" data-ch="age"' + (f.age ? ' checked' : '') + '><span>' + t('age') + '</span></label><div class="legal-box"><span>' + T.fr.minors + '</span><span>' + T.fr.health + '</span></div>' : '') +
+    '<p class="hint">' + t('noPhone') + '</p><p class="hint">' + t('legal') + '</p>' + (SH.err ? '<p class="err" role="alert">' + SH.err + '</p>' : '') + '</div></div>' +
+    '<div class="sheet-foot"><button class="btn ghost" data-act="step" data-s="2">' + t('back') + '</button><button class="btn-main" data-act="step" data-s="4"><span>' + t('continue') + '</span><span>' + money(totals().total) + '</span></button></div>';
+}
+function orderCode(){
+  const f = S.form;
+  const when = f.slot === 'asap' ? asapAt() : (parseInt(f.slot.slice(0, 2), 10) * 60 + parseInt(f.slot.slice(3), 10));
+  const A = 'ABCDEFGHJKMNPQRSTUVWXYZ', D = '23456789';
+  return {code:(S.mode === 'delivery' ? 'L' : 'E') + hm(when).replace(':', '') + '-' + A[Math.floor(Math.random() * A.length)] + D[Math.floor(Math.random() * D.length)], when};
+}
+function orderMessage(code, when){
+  const f = S.form; const c = commune(f.commune); const tt = totals();
+  const lines = S.basket.map(l => { const sum = lineSummary(l, 'fr'); return l.qty + '× ' + lineName(l, 'fr') + (sum ? ' (' + sum + ')' : '') + ' – ' + moneyFr(lineUnit(l) * l.qty) + (l.note ? '\n   → ' + l.note : ''); });
+  const out = ['Bonjour Takit’os, voici ma commande (via le site) :', 'Code : ' + code];
+  if(S.mode === 'delivery'){ out.push('LIVRAISON – ' + (c ? c.name : '')); out.push('Adresse : ' + f.addr); if(f.details) out.push('Précisions : ' + f.details); }
+  else out.push('À EMPORTER – 49 ter Grande Rue, Dolus');
+  out.push('Créneau : ' + (f.slot === 'asap' ? 'dès que possible (vers ' + hm(when) + ')' : f.slot)); out.push('');
+  out.push(...lines); out.push('');
+  out.push('Sous-total : ' + moneyFr(tt.sub)); if(tt.disc) out.push('Remise BIENVENUE : −' + moneyFr(tt.disc)); if(S.mode === 'delivery') out.push('Livraison : ' + moneyFr(tt.fee));
+  out.push('Total : ' + moneyFr(tt.total) + ' – paiement ' + (f.pay === 'cash' ? 'en espèces' : 'par carte') + (S.mode === 'delivery' ? ' à la livraison' : ' au retrait'));
+  out.push('Prénom : ' + f.name); if(f.allergy) out.push('ALLERGIE : ' + f.allergy); if(S.cutlery) out.push('Couverts : oui'); if(hasAlcohol(S.basket)) out.push('Bière : client majeur (à vérifier à la remise)'); if(S.lang === 'en') out.push('(Client anglophone)');
+  return out.join('\n');
+}
+function stepSend(){
+  if(!SH.code){ const o = orderCode(); SH.code = o.code; SH.when = o.when; }
+  const tt = totals(); const f = S.form; const c = commune(f.commune);
+  const msg = orderMessage(SH.code, SH.when);
+  const recap = '<div class="recap"><b>' + t('recapTitle') + '</b><ul>' + S.basket.map(l => '<li>' + l.qty + '× ' + esc(lineName(l)) + '</li>').join('') + '</ul><span>' + (S.mode === 'delivery' ? esc((c ? c.short + ', ' : '') + f.addr) : esc(t('pickup'))) + ', ' + (f.slot === 'asap' ? hm(SH.when) : f.slot) + '</span><span class="tot">' + t('total') + ' ' + money(tt.total) + ', ' + (f.pay === 'cash' ? t('cash') : t('card')).toLowerCase() + '</span></div>';
+  return topBar(stepsHTML(4)) + '<div class="sheet-scroll"><div class="pad"><h2 class="sh-title" id="sheet-title">' + t('sendTitle') + '</h2>' +
+    '<div class="code"><small>' + t('codeLabel') + '</small><strong>' + SH.code + '</strong><p>' + t('codeHint') + '</p></div>' +
+    '<p class="sh-desc">' + t('howItWorks') + '</p>' + recap +
+    '<details><summary class="link" style="cursor:pointer">' + t('seeMsg') + '</summary><pre class="raw">' + esc(msg) + '</pre></details>' +
+    '<div class="send"><button class="btn" data-act="send" data-v="WhatsApp" data-autofocus>' + I.chat + t('viaWa') + '</button><button class="btn wall" data-act="send" data-v="SMS">' + I.sms + t('viaSms') + '</button>' +
+    '<div class="callbox"><b style="display:flex;align-items:center;gap:8px">' + I.phone + t('viaCall') + '</b><span>' + t('callHint', {tel:'<span class="sel">' + ORDER_LINE + '</span>'}) + '</span></div></div></div></div>' +
+    '<div class="sheet-foot"><button class="btn ghost" data-act="step" data-s="3">' + t('back') + '</button></div>';
+}
+let replyTimer = null;
+function stepWait(){
+  const f = SH.sent;
+  const reply = (S.lang === 'en' ? 'Hi ' : 'Bonsoir ') + esc(f.name) + ' ! ' + (S.lang === 'en' ? 'Order ' : 'Commande ') + f.code + (S.lang === 'en' ? ' confirmed, ' : ' confirmée, ') +
+    (f.mode === 'delivery' ? (S.lang === 'en' ? 'delivery around ' : 'livraison vers ') : (S.lang === 'en' ? 'ready around ' : 'prête vers ')) + f.when + '. ' +
+    (S.lang === 'en' ? 'Payment by ' + (f.pay === 'cash' ? 'cash' : 'card') + (f.mode === 'delivery' ? ' at the door.' : ' at pickup.') : 'Paiement ' + (f.pay === 'cash' ? 'en espèces' : 'par carte') + (f.mode === 'delivery' ? ' à la porte.' : ' au retrait.')) +
+    (S.lang === 'en' ? ' See you soon!' : ' À tout à l’heure !') + '\nTakit’os';
+  return topBar('') + '<div class="sheet-scroll"><div class="pad"><h2 class="sh-title" id="sheet-title">' + t('waitTitle') + '</h2><p class="sh-desc">' + t(f.app === 'SMS' ? 'waitSubSms' : 'waitSubWa') + '</p>' +
+    '<div class="chat"><div class="bub me">' + esc(f.msg.split('\n').slice(0, 6).join('\n')) + '\n…</div>' + (SH.replied ? '<div class="bub them">' + reply + '</div>' : '<div class="typing" aria-label="…"><i></i><i></i><i></i></div>') + '</div>' +
+    '<p class="demo-hint">' + t('demoReply') + '</p>' +
+    (SH.replied ? '<div class="code"><small>' + t('codeLabel') + '</small><strong>' + f.code + '</strong><p>' + (f.mode === 'delivery' ? t('nextD', {code:f.code}) : t('nextP', {code:f.code})) + '</p></div>' : '') + '</div></div>' +
+    '<div class="sheet-foot"><button class="btn-main" data-act="close"><span>' + t('backMenu') + '</span><span></span></button></div>';
+}
+function sheetAllergens(){
+  const origin = m => m ? esc(cap(t('meat_' + m))) + colon() + '<span class="todo">' + t('toFill') + '</span>' : '—';
+  const rows = ITEMS.map(it => { const al = lineAllergens({id:it.id, opts:defaultOpts(it)}); return '<tr><td><b>' + esc(lineName({id:it.id, opts:defaultOpts(it)})) + '</b></td><td>' + esc(al.length ? al.map(a => L(ALLERGENS[a])).join(', ') : '—') + '</td><td>' + origin(it.meat) + '</td></tr>'; }).join('') +
+    FILLINGS.map(f => '<tr><td><b>' + esc(t('kitFilling', {f:f.name})) + '</b></td><td>' + esc(f.allergens.length ? f.allergens.map(a => L(ALLERGENS[a])).join(', ') : '—') + '</td><td>' + origin(f.meat) + '</td></tr>').join('');
+  return topBar('') + '<div class="sheet-scroll"><div class="pad"><h2 class="sh-title" id="sheet-title">' + t('allergenTable') + '</h2><p class="demo-hint">' + t('allergenNote') + '</p><div class="ttab-wrap"><table class="ttab"><thead><tr><th scope="col">' + t('dish') + '</th><th scope="col">' + t('allergens') + '</th><th scope="col">' + t('originCol') + '</th></tr></thead><tbody>' + rows + '</tbody></table></div></div></div>' +
+    '<div class="sheet-foot"><button class="btn-main" data-act="close"><span>' + t('close') + '</span><span></span></button></div>';
+}
+
+/* ================= restaurant menu page ================= */
+function viewCarte(){
+  const sec = s => {
+    if(s.table) return '<section class="cs cs-wide"><h2>' + s.h + '</h2>' + (s.note ? '<p class="note">' + s.note + '</p>' : '') + '<div class="ttab-wrap"><table class="ttab"><thead><tr><th scope="col">Taco</th><th scope="col" class="n">×2</th><th scope="col" class="n">×3</th><th scope="col" class="n">×5</th></tr></thead><tbody>' +
+      s.table.map(r => '<tr><td><b>' + r[0] + '</b><small>' + r[1] + '</small></td><td class="n">' + r[2] + '</td><td class="n">' + r[3] + '</td><td class="n">' + r[4] + '</td></tr>').join('') + '</tbody></table></div></section>';
+    return '<section class="cs"><h2>' + s.h + '</h2>' + (s.note ? '<p class="note">' + s.note + '</p>' : '') + s.items.map(i => '<div class="ci"><b>' + i[0] + '</b><span class="p">' + i[1] + '</span>' + (i[2] ? '<p>' + i[2] + '</p>' : '') + '</div>').join('') + '</section>';
+  };
+  return '<div class="carte"><div class="carte-top"><div class="wrap"><button data-act="home">' + I.back + t('carteBack') + '</button><button class="lang-btn" data-act="lang" data-l="' + (S.lang === 'fr' ? 'en' : 'fr') + '" aria-label="' + t('langSwitch') + '">' + t('langOther') + '</button></div></div>' +
+    '<header class="carte-head"><div class="wrap"><h1>' + t('carteTitle') + '</h1><p>' + t('carteHead') + '</p></div></header>' +
+    '<div class="wrap carte-grid">' + DINEIN.map(sec).join('') +
+    '<section class="cs"><h2>' + t('footnotes') + '</h2><ul class="fn">' + FOOTNOTES.map(f => '<li>*' + f + '</li>').join('') + '</ul></section>' +
+    '<section class="cs"><h2>' + t('hoursTitle') + '</h2><p class="note">' + t('hoursBody') + '</p><p class="note">' + t('hoursWhen') + '</p><p class="note">49 ter Grande Rue, 17550 Dolus-d’Oléron. <span class="sel">' + FIXED_LINE + '</span>, <span class="sel">' + ORDER_LINE + '</span></p></section></div>' +
+    '<div class="wrap"><p class="small foot-demo">' + t('footDemo') + '</p></div></div>';
+}
+
+/* ================= scroll spy ================= */
+let spy = null;
+function setupSpy(){
+  if(spy){ spy.disconnect(); spy = null; }
+  if(location.hash === '#carte' || !('IntersectionObserver' in window)) return;
+  spy = new IntersectionObserver(es => { es.forEach(e => { if(e.isIntersecting) markChip(e.target.dataset.c); }); }, {rootMargin:'-70px 0px -60% 0px', threshold:0});
+  document.querySelectorAll('.sec').forEach(s => spy.observe(s));
+}
+function markChip(id){
+  document.querySelectorAll('.chip[data-c]').forEach(b => b.setAttribute('aria-current', b.dataset.c === id ? 'true' : 'false'));
+  const b = document.querySelector('.chip[data-c="' + id + '"]'); const box = document.querySelector('.cats-in');
+  if(b && box) box.scrollTo({left:b.offsetLeft - box.clientWidth / 2 + b.clientWidth / 2, behavior:reduceMotion() ? 'auto' : 'smooth'});
+}
+
+/* ================= actions ================= */
+let toastTimer = null;
+function toast(m){ const el = $('#toast'); el.textContent = m; el.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 2600); }
+function rerender(){ save(); render(); if(SH) renderSheet(true); }
+function validate(step){
+  const f = S.form;
+  if(step === 2 && f.slot !== 'asap' && !slotList().some(s => hm(s.m) === f.slot && !s.full)) f.slot = 'asap';
+  if(step === 2 && S.mode === 'delivery'){
+    const det = detect(f.addr);
+    if(det.mainland || norm(f.addr).length < 3) return t('errAddr');
+    if(!commune(f.commune)) return t('errCommune');
+    const m = minBlock(); if(m) return m;
+  }
+  if(step === 3){ if(!f.name.trim()) return t('errName'); if(hasAlcohol(S.basket) && !f.age) return t('errAge'); }
+  return '';
+}
+const ACT = {
+  lang:el => { S.lang = el.dataset.l; rerender(); },
+  mode:el => { S.mode = el.dataset.v; if(SH){ SH.err = ''; } rerender(); },
+  cat:el => { const sec = $('#sec-' + el.dataset.c); if(!sec) return; window.scrollTo({top:sec.getBoundingClientRect().top + window.scrollY - 62, behavior:reduceMotion() ? 'auto' : 'smooth'}); markChip(el.dataset.c); },
+  open:el => { const it = item(el.dataset.id); openSheet('item', {id:it.id, opts:defaultOpts(it), qty:1, note:'', photo:null}); },
+  quick:el => { const it = item(el.dataset.id); if(groupsFor(it, {}).length){ const ret = (SH && SH.kind === 'checkout') ? {step:SH.step} : null; openSheet('item', {id:it.id, opts:defaultOpts(it), qty:1, note:'', photo:null, ret}); return; } addLine({id:it.id, opts:{}, qty:1, note:''}); rerender(); toast(t('added') + ' : ' + L(it.name)); },
+  'sh-inc':() => { SH.qty = Math.min(20, SH.qty + 1); renderSheet(true); },
+  'sh-dec':() => { SH.qty = Math.max(1, SH.qty - 1); renderSheet(true); },
+  'sh-add':() => { const it = item(SH.id); const ret = SH.ret; addLine({id:it.id, opts:Object.assign({}, SH.opts), qty:SH.qty, note:SH.note.trim()}); closeSheet(); save(); render(); toast(t('added') + ' : ' + L(it.name)); if(ret) openSheet('checkout', {step:1}); },
+  photo:el => { SH.photo = el.dataset.k || null; renderSheet(true); },
+  'kit-open':() => openSheet('kit', {kit:{size:'duo', fillings:[], side:'patacones'}, qty:1, photo:null, note:'', kitErr:false}),
+  'kit-inc':() => { SH.qty = Math.min(10, SH.qty + 1); renderSheet(true); },
+  'kit-dec':() => { SH.qty = Math.max(1, SH.qty - 1); renderSheet(true); },
+  'kit-add':() => { const k = SH.kit; if(!k.fillings.length){ SH.kitErr = true; renderSheet(true); const fl = document.querySelector('#sheet .fills'); if(fl) fl.scrollIntoView({block:'center', behavior:reduceMotion() ? 'auto' : 'smooth'}); const c = document.querySelector('#sheet .fills input:not([disabled])'); if(c) c.focus({preventScroll:true}); return; } addLine({id:'kit', kit:{size:k.size, fillings:k.fillings.slice(), side:k.size === 'familia' ? k.side : null}, qty:SH.qty, note:(SH.note || '').trim()}); closeSheet(); save(); render(); toast(t('added') + ' : ' + lineName({kit:k})); },
+  'fiesta-open':() => openSheet('fiesta', {f:{guests:10, date:openDayFrom(3), minDate:dayFrom(2), time:'19:30', wishes:[], note:''}}),
+  'fz-inc':() => { SH.f.guests = Math.min(60, SH.f.guests + 1); renderSheet(true); },
+  'fz-dec':() => { SH.f.guests = Math.max(8, SH.f.guests - 1); renderSheet(true); },
+  'fz-send':el => { toast(t('demoSend', {app:el.dataset.v})); SH.sent = true; renderSheet(); },
+  'open-basket':() => openSheet('checkout', {step:1}),
+  checkout:() => openSheet('checkout', {step:2}),
+  step:el => {
+    const to = +el.dataset.s; const from = SH.step;
+    if(to > from){ const e = validate(from); if(e){ SH.err = e; renderSheet(true); const er = document.querySelector('#sheet .err[role="alert"]'); if(er) er.scrollIntoView({block:'nearest'}); return; } }
+    SH.err = ''; SH.step = to; if(to < 4) SH.code = null; SH.sugg = false; renderSheet();
+  },
+  'line-inc':el => { S.basket[+el.dataset.i].qty++; rerender(); },
+  'line-dec':el => { const i = +el.dataset.i; S.basket[i].qty--; if(S.basket[i].qty <= 0) S.basket.splice(i, 1); save(); render(); if(SH){ if(!S.basket.length) closeSheet(); else renderSheet(true); } },
+  'line-meal':el => { const l = S.basket[+el.dataset.i]; l.opts = {formule:'menu', drink:'s:Coca-Cola'}; rerender(); },
+  promo:el => { const inp = document.getElementById(el.dataset.s); const v = (inp ? inp.value : '').trim().toUpperCase(); if(v === 'BIENVENUE' && !S.welcomeUsed){ S.promo = v; S.promoMsg = ''; } else S.promoMsg = v === 'BIENVENUE' ? 'used' : 'bad'; rerender(); },
+  'promo-remove':() => { S.promo = ''; rerender(); },
+  'pick-place':el => { const f = S.form; f.addr = completeWith(f.addr, el.dataset.v); f.commune = el.dataset.c; SH.sugg = false; SH.err = ''; save(); const n = $('#f-addr'); if(n) n.value = f.addr; updateWhere(); const d = $('#f-details'); if(d) d.focus({preventScroll:true}); },
+  commune:el => { S.form.commune = el.dataset.c; SH.askCommune = false; SH.err = ''; save(); updateWhere(); const d = $('#f-details'); if(d) d.focus({preventScroll:true}); },
+  'commune-change':() => { S.form.commune = ''; SH.askCommune = true; save(); updateWhere(); const b = document.querySelector('#w-zone .cchip'); if(b) b.focus({preventScroll:true}); },
+  send:el => {
+    const app = el.dataset.v; toast(t('demoSend', {app}));
+    const f = S.form; const tt = totals();
+    const sent = {app, code:SH.code, when:(f.slot === 'asap' ? hm(SH.when) : f.slot), msg:orderMessage(SH.code, SH.when), name:f.name, pay:f.pay, mode:S.mode};
+    S.last = {lines:JSON.parse(JSON.stringify(S.basket)), total:tt.total, count:tt.count};
+    if(S.promo === 'BIENVENUE') S.welcomeUsed = true;
+    S.basket = []; S.promo = ''; S.promoMsg = ''; f.age = false; save();
+    SH.step = 5; SH.sent = sent; SH.replied = false; renderSheet(); render();
+    clearTimeout(replyTimer); replyTimer = setTimeout(() => { if(SH && SH.step === 5){ SH.replied = true; renderSheet(true); } }, reduceMotion() ? 50 : 1800);
+  },
+  reorder:() => { if(!S.last) return; S.basket = JSON.parse(JSON.stringify(S.last.lines)); save(); render(); openSheet('checkout', {step:1}); },
+  close:() => closeSheet(),
+  carte:() => { location.hash = 'carte'; },
+  home:() => { history.length > 1 && location.hash === '#carte' ? (location.hash = '') : (location.hash = ''); },
+  legal:() => toast(t('legalSoon')),
+  'allergen-table':() => openSheet('allergens')
+};
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]'); if(!el) return;
+  const fn = ACT[el.dataset.act]; if(!fn) return;
+  e.preventDefault(); fn(el, e);
+});
+document.addEventListener('change', e => {
+  const el = e.target; const ch = el.dataset && el.dataset.ch; if(!ch) return;
+  const f = S.form;
+  if(ch === 'cutlery'){ S.cutlery = el.checked; rerender(); return; }
+  if(ch === 'opt'){ SH.opts[el.dataset.k] = el.value; if(el.dataset.k === 'formule'){ if(el.value === 'menu' && !SH.opts.drink) SH.opts.drink = 's:Coca-Cola'; if(el.value === 'seule') delete SH.opts.drink; } renderSheet(true); return; }
+  if(ch === 'kit-size'){ SH.kit.size = el.value; const n = KIT_SIZES.find(s => s.id === el.value).n; SH.kit.fillings = SH.kit.fillings.slice(0, n); renderSheet(true); return; }
+  if(ch === 'kit-fill'){ const k = SH.kit; const n = KIT_SIZES.find(s => s.id === k.size).n; if(el.checked){ if(k.fillings.length < n) k.fillings.push(el.value); } else k.fillings = k.fillings.filter(x => x !== el.value); renderSheet(true); return; }
+  if(ch === 'kit-side'){ SH.kit.side = el.value; renderSheet(true); return; }
+  if(ch === 'slot'){ f.slot = el.value; save(); return; }
+  if(ch === 'pay'){ f.pay = el.value; save(); return; }
+  if(ch === 'age'){ f.age = el.checked; save(); return; }
+  if(ch === 'fz-time'){ SH.f.time = el.value; return; }
+  if(ch === 'fz-date'){ SH.f.date = el.value; renderSheet(true); return; }
+  if(ch === 'fz-wish'){ const w = SH.f.wishes; if(el.checked) w.push(el.value); else SH.f.wishes = w.filter(x => x !== el.value); return; }
+});
+let addrTimer = null;
+document.addEventListener('input', e => {
+  const el = e.target; const k = el.dataset && el.dataset.in; if(!k) return;
+  const f = S.form;
+  if(k === 'addr'){
+    f.addr = el.value; const det = detect(f.addr);
+    if(det.commune) f.commune = det.commune; else if(det.mainland || norm(f.addr).length < 2) f.commune = '';
+    if(SH){ SH.sugg = true; } save();
+    clearTimeout(addrTimer); addrTimer = setTimeout(updateWhere, 120);
+    return;
+  }
+  if(k === 'details'){ f.details = el.value; save(); return; }
+  if(k === 'name'){ f.name = el.value; save(); return; }
+  if(k === 'allergy'){ f.allergy = el.value; save(); return; }
+  if((k === 'item-note' || k === 'kit-note') && SH){ SH.note = el.value; return; }
+
+  if(k === 'fz-note' && SH){ SH.f.note = el.value; return; }
+});
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape' && SH){ closeSheet(); return; }
+  if(e.key === 'Tab' && SH){
+    const w = document.querySelector('#sheet .sheet'); if(!w) return;
+    const f = [...w.querySelectorAll('button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),summary,a[href]')].filter(n => n.getClientRects().length && !((n.type === 'radio') && !n.checked));
+    if(!f.length) return; const first = f[0], last = f[f.length - 1];
+    if(!w.contains(document.activeElement)){ e.preventDefault(); first.focus(); return; }
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); return; }
+    if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); return; }
+  }
+  if(e.key === 'Enter' && e.target && e.target.dataset && e.target.dataset.in === 'promo'){ e.preventDefault(); const b = e.target.parentNode.querySelector('[data-act="promo"]'); if(b) ACT.promo(b); }
+});
+let resizeTimer = null;
+window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(fitWordmark, 80); });
+window.addEventListener('hashchange', () => { if(SH) closeSheet(); render(); window.scrollTo(0, 0); });
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(fitWordmark).catch(() => {});
+
+/* ================= boot ================= */
+S = load() || fresh();
+render();
+})();
+</script>
+
+</body></html>
